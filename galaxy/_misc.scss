@@ -1,0 +1,26 @@
+@import "misc/alerts";
+
+label:not([for]) {
+	display: inline;
+	padding: .6em 1em .6em;
+	font-size: .95em;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: $md-border-radius;
+}
+
+.light {
+	width: 50%;
+    height: 10em;
+    float: right;
+    border: .5em solid black;
+    background-color: gray;
+    transition: .5s all ease-in-out;
+    text-align: center;
+    &.active {
+    	background: $primary-color;
+    }
+}

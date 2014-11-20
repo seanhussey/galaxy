@@ -1,0 +1,87 @@
+/* --- FORMS */
+
+input[type='checkbox'], input[type='radio'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='tel'], input[type='color'], select {
+	/* Fields without text */
+	display: inline;
+	margin: 1%;
+}
+
+input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea {
+	/* All fields */
+	font-size: 1em;
+	line-height: 100%;
+	position: relative;
+	min-height: 3em;
+	vertical-align: middle;
+	-webkit-transition: border-color .3s ease;
+	transition: border-color .3s ease;
+	text-indent: 5%;
+	text-overflow: ellipsis;
+	color: #333;
+	background: #fff;
+	@include dark-border;
+	@include border-box;
+	@include no-appearance;
+}
+
+input[type='checkbox'], input[type='radio'], input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='number'], input[type='search'], input[type='tel'], textarea {
+		/* All fields with text */
+		border: $light-shadow 1px solid;
+		font-weight: bold;
+
+		&:hover {
+			box-shadow: inset 0 1px 3px $light-shadow;
+	}
+	&:focus {
+	border: $primary-color 1px solid;
+	box-shadow: inset 0 1px 3px $light-shadow;
+	box-shadow: none;
+	}
+	&:focus:invalid {
+	 border: darken($default-color, 25) 1px solid;
+	}
+}
+
+/* -- LAYOUTS */
+[g~="grouped"] {
+	& > input[type='text'], & > input[type='email'], & > input[type='password'], & > input[type='submit'], & > button {
+	width: 100%;
+	flex-basis: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-radius: 0;
+	&:first-child {
+		display: block;
+		margin-bottom: 0;
+		border-radius: 3px 3px 0 0;
+	}
+	&:last-child {
+		display: block;
+		margin-top: 0;
+		border-radius: 0 0 3px 3px;
+	}
+	}
+	& > button {
+	border-radius: 0 0 3px 3px !important;
+	}
+}
+
+/* -- MISC */
+label[for] {
+	padding: $md-padding;
+	cursor: pointer;
+}
+
+fieldset {
+	padding: $sm-padding;
+	@include light-border;
+}
+
+table th, table td {
+	padding: 1rem;
+	border-bottom: 1px solid $light-shadow;
+}
+
+table > tbody {
+	color: $dark-shadow;
+}

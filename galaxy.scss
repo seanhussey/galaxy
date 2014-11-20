@@ -1,0 +1,26 @@
+@import "galaxy/globals";
+@import "galaxy/base";
+// @import "galaxy/grid";
+@import "galaxy/flex"; // Flexgrid (recommended unless you need to support IE9)
+@import "galaxy/buttons";
+@import "galaxy/forms";
+@import "galaxy/nav";
+@import "galaxy/bem";
+@import "galaxy/alerts";
+@import "galaxy/misc";
+
+/*---- PLUGINS */
+@import "galaxy/plugins/tooltips";
+
+[g~="primary"] {
+	@include button-colors($primary-color);
+}
+[g~="success"] {
+	@include button-colors($success-color);
+}
+[g~="warning"] {
+	@include button-colors($warning-color);
+}
+[g~="danger"] {
+	@include button-colors($danger-color);
+}
