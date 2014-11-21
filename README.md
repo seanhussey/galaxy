@@ -18,18 +18,19 @@ This will always link to the latest version of Galaxy.
 # Galaxy.js & State-toggle Things To-do:
 
 ## _nav.scss
-- Header needs to be responsive when window is resized to a breakpoint that causes text to collapse.
-- Trigger [offcanvas](http://getuikit.com/docs/offcanvas.html#usage) with statetoggle
-- Toggle tabs
-- Toggle accordions
-- Toggle modals
+1. Header needs to be responsive when window is resized to a breakpoint that causes text to collapse.
+2. Toggle modals
+3. Toggle tabs
+4. Trigger [offcanvas](http://getuikit.com/docs/offcanvas.html#usage) with statetoggle
+5. Toggle accordions
+
 
 ## _buttons.scss
-- Needs to activate dropdown when clicked.
-- Toggle buttons to `:active`
+1. Needs to activate dropdown when clicked.
+2. Toggle buttons to `:active`
 
 ## docs.js
-- Scrollspy sidebar with minimum Javascript
+1. Scrollspy sidebar with minimum Javascript
 
 ---
 
