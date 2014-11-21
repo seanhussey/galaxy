@@ -13,19 +13,25 @@ You can either clone Galaxy to your project, or use the CDN linking to the lates
 `<link rel="stylesheet" href="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.css">`
 This will always link to the latest version of Galaxy.
 
-# To do:
+---
+
+# Galaxy.js & State-toggle Things To-do:
 
 ## _nav.scss
 - Header needs to be responsive when window is resized to a breakpoint that causes text to collapse.
-- Needs to support tabs
-- Needs to support accordions
+- Trigger [offcanvas](http://getuikit.com/docs/offcanvas.html#usage) with statetoggle
+- Toggle tabs
+- Toggle accordions
+- Toggle modals
 
 ## _buttons.scss
 - Needs to activate dropdown when clicked.
+- Toggle buttons to `:active`
 
-## Documentation
+## docs.js
 - Scrollspy sidebar with minimum Javascript
 
+---
 
 ## Reporting a Bug
 
