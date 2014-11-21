@@ -29,18 +29,42 @@ button, input[type="submit"] {
 
 	&[g~="primary"] {
 		@include button-colors($primary-color);
+		&:hover {
+			background: lighten($primary-color, 15);
+		}
+		&:active {
+			background: darken($primary-color, 15);
+		}
 	}
 
 	&[g~="success"] {
 		@include button-colors($success-color);
+		&:hover {
+			background: lighten($success-color, 15);
+		}
+		&:active {
+			background: darken($success-color, 15);
+		}
 	}
 
 	&[g~="warning"] {
 		@include button-colors($warning-color);
+		&:hover {
+			background: lighten($warning-color, 15);
+		}
+		&:active {
+			background: darken($warning-color, 15);
+		}
 	}
 
 	&[g~="danger"] {
 		@include button-colors($danger-color);
+		&:hover {
+			background: lighten($danger-color, 15);
+		}
+		&:active {
+			background: darken($danger-color, 15);
+		}
 	}
 
 	&[g~="disabled"] {

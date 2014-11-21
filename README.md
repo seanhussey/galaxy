@@ -16,7 +16,7 @@ This will always link to the latest version of Galaxy.
 # To do:
 
 ## _nav.scss
-- Needs to be responsive when window is resized to a breakpoint that causes text to collapse.
+- Header needs to be responsive when window is resized to a breakpoint that causes text to collapse.
 - Needs to support tabs
 - Needs to support accordions
 
