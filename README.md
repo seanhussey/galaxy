@@ -15,15 +15,15 @@ This will always link to the latest version of Galaxy.
 
 # To do:
 
-1. _nav.scss
+## _nav.scss
 - Needs to be responsive when window is resized to a breakpoint that causes text to collapse.
 - Needs to support tabs
 - Needs to support accordions
 
-2. _buttons.scss
+## _buttons.scss
 - Needs to activate dropdown when clicked.
 
-3. Documentation
+## Documentation
 - Scrollspy sidebar with minimum Javascript
 
 
