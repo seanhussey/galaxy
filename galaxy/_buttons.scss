@@ -2,7 +2,7 @@
 
 button, input[type="submit"] {
 	border: $default-color 1px solid;
-	@include button-colors($default-color);
+	@include button-colors($default-color); // Includes hover and active states.
 	padding: .8rem 2rem;
 	font-weight: 400;
 	font-size: .9rem;
@@ -12,10 +12,10 @@ button, input[type="submit"] {
 	white-space: nowrap;
 	height: initial;
 	text-align: center;
-	font-weight: 800;
+	font-weight: bold;
 	height: 100%;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	transition-duration: .3s;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Material design
 
 	&:hover {
 		filter: none;
@@ -29,42 +29,18 @@ button, input[type="submit"] {
 
 	&[g~="primary"] {
 		@include button-colors($primary-color);
-		&:hover {
-			background: lighten($primary-color, 15);
-		}
-		&:active {
-			background: darken($primary-color, 15);
-		}
 	}
 
 	&[g~="success"] {
 		@include button-colors($success-color);
-		&:hover {
-			background: lighten($success-color, 15);
-		}
-		&:active {
-			background: darken($success-color, 15);
-		}
 	}
 
 	&[g~="warning"] {
 		@include button-colors($warning-color);
-		&:hover {
-			background: lighten($warning-color, 15);
-		}
-		&:active {
-			background: darken($warning-color, 15);
-		}
 	}
 
 	&[g~="danger"] {
 		@include button-colors($danger-color);
-		&:hover {
-			background: lighten($danger-color, 15);
-		}
-		&:active {
-			background: darken($danger-color, 15);
-		}
 	}
 
 	&[g~="disabled"] {

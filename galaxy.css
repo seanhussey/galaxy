@@ -845,10 +845,14 @@ button, input[type="submit"] {
   white-space: nowrap;
   height: initial;
   text-align: center;
-  font-weight: 800;
+  font-weight: bold;
   height: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition-duration: .3s; }
+  transition-duration: .3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+  button:hover, input[type="submit"]:hover {
+    background: white; }
+  button:active, input[type="submit"]:active {
+    background: #cccccc; }
   button:hover, input[type="submit"]:hover {
     filter: none;
     box-shadow: none;
@@ -1308,23 +1312,39 @@ label:not([for]) {
   border-color: #1c86bc;
   background: #2CA3DF;
   color: white; }
+  [g~="primary"]:hover {
+    background: #6ec0e9; }
+  [g~="primary"]:active {
+    background: #1976a5; }
 
 [g~="success"] {
   /* If background is dark, then make color lighter */
   border-color: #9fb321;
   background: #c1d82f;
   color: white; }
+  [g~="success"]:hover {
+    background: #d4e46f; }
+  [g~="success"]:active {
+    background: #8c9d1d; }
 
 [g~="warning"] {
   /* If background is dark, then make color lighter */
   border-color: #f79c05;
   background: #fbb034;
   color: white; }
+  [g~="warning"]:hover {
+    background: #fccd7f; }
+  [g~="warning"]:active {
+    background: #de8c04; }
 
 [g~="danger"] {
   /* If background is dark, then make color lighter */
   border-color: #8a2000;
   background: #BD2C00;
   color: white; }
+  [g~="danger"]:hover {
+    background: #ff430b; }
+  [g~="danger"]:active {
+    background: #711a00; }
 
 /*# sourceMappingURL=galaxy.css.map */

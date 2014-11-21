@@ -153,6 +153,12 @@ $light-danger-color: #fff1f0;
 	border-color: darken($button-color, 10);
 	background: $button-color;
 	color: lighten(contrast-color($button-color), 50);
+	&:hover {
+		background: lighten($button-color, 15);
+	}
+	&:active {
+		background: darken($button-color, 15);
+	}
 }
 
 @function contrast-border($bg-color) {
