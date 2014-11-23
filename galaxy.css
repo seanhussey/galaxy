@@ -74,10 +74,8 @@ h6 {
   width: 100%; }
 
 hr {
-  width: 10em;
-  margin-top: 3em;
-  margin-bottom: 1em;
-  border: #eee 1px solid; }
+  width: 33%;
+  border: #ddd 1px solid; }
 
 button {
   overflow: visible; }
@@ -975,13 +973,13 @@ input[type='text'], input[type='password'], input[type='email'], input[type='url
 
 input[type='checkbox'], input[type='radio'], input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='number'], input[type='search'], input[type='tel'], textarea {
   /* All fields with text */
-  border: #dddddd 1px solid;
+  border: #ddd 1px solid;
   font-weight: bold; }
   input[type='checkbox']:hover, input[type='radio']:hover, input[type='text']:hover, input[type='password']:hover, input[type='email']:hover, input[type='url']:hover, input[type='number']:hover, input[type='search']:hover, input[type='tel']:hover, textarea:hover {
-    box-shadow: inset 0 1px 3px #dddddd; }
+    box-shadow: inset 0 1px 3px #ddd; }
   input[type='checkbox']:focus, input[type='radio']:focus, input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='url']:focus, input[type='number']:focus, input[type='search']:focus, input[type='tel']:focus, textarea:focus {
     border: #2CA3DF 1px solid;
-    box-shadow: inset 0 1px 3px #dddddd;
+    box-shadow: inset 0 1px 3px #ddd;
     box-shadow: none; }
   input[type='checkbox']:focus:invalid, input[type='radio']:focus:invalid, input[type='text']:focus:invalid, input[type='password']:focus:invalid, input[type='email']:focus:invalid, input[type='url']:focus:invalid, input[type='number']:focus:invalid, input[type='search']:focus:invalid, input[type='tel']:focus:invalid, textarea:focus:invalid {
     border: #b2b2b2 1px solid; }
@@ -1018,14 +1016,13 @@ fieldset {
 
 table th, table td {
   padding: 1rem;
-  border-bottom: 1px solid #dddddd; }
+  border-bottom: 1px solid #ddd; }
 
 table > tbody {
-  color: #383838; }
+  color: #eee; }
 
 /* Header should wrap content */
 header {
-  z-index: 10;
   top: 0;
   margin: 0;
   opacity: 1;
@@ -1220,6 +1217,66 @@ alert {
     background: #fff1f0;
     border: #ff7a71 1px solid; }
 
+.modal, .modal_bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0; }
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s all ease-in; }
+
+.modal.active {
+  margin-top: 10vh;
+  visibility: visible;
+  filter: none;
+  opacity: 1;
+  z-index: 100; }
+
+.modal_bg {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .2s all ease-in; }
+
+.active .modal_bg {
+  opacity: 1; }
+
+.modal_box {
+  width: 50%;
+  height: auto;
+  padding: 1em;
+  border: 0.15em solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: .5s all ease-in;
+  overflow: scroll;
+  text-align: left; }
+
+.active .modal_box {
+  top: 0; }
+
+.footer {
+  border-top: #eee 1px solid;
+  display: flex;
+  width: 50%;
+  position: fixed;
+  margin-top: 1em;
+  bottom: 0;
+  padding: 1em 0;
+  background: #FFF; }
+
+.content {
+  margin-bottom: 15em; }
+
 label:not([for]) {
   display: inline;
   padding: .6em 1em .6em;
@@ -1230,17 +1287,6 @@ label:not([for]) {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.3em; }
-
-.light {
-  width: 50%;
-  height: 10em;
-  float: right;
-  border: .5em solid black;
-  background-color: gray;
-  transition: .5s all ease-in-out;
-  text-align: center; }
-  .light.active {
-    background: #2CA3DF; }
 
 /*---- PLUGINS */
 /* Add this attribute to the element that needs a tooltip */
