@@ -24,24 +24,25 @@ header {
 			margin: 0 2em;
 			color: darken(contrast-color($nav-color), 10);
 			font-weight: bold;
-			& a {
-				padding: 1em;
-				transition: .3s;
-				color: darken(contrast-color($nav-color), 10);
-				&:hover:not([g~="active"]) {
-				@if (lightness($nav-color) > 50) {
-						/* Lighter navs should have darker feedback */
-						color: darken(contrast-color($nav-color), 10);
-					} @else {
-						/* Darker navs should have brighter feedback */
-						color: lighten(contrast-color($nav-color), 10);
-					}
-				}
-				&[g~="active"], [g~="active"]:hover, [g~="active"]:active {
-					color: contrast-color($nav-color);
-					opacity: 1;
-				}
 			}
+		}
+
+	& a {
+		padding: 1em;
+		transition: .3s;
+		color: darken(contrast-color($nav-color), 10);
+		&:hover:not([g~="active"]) {
+		@if (lightness($nav-color) > 50) {
+				/* Lighter navs should have darker feedback */
+				color: darken(contrast-color($nav-color), 10);
+			} @else {
+				/* Darker navs should have brighter feedback */
+				color: lighten(contrast-color($nav-color), 10);
+			}
+		}
+		&[g~="active"], [g~="active"]:hover, [g~="active"]:active {
+			color: contrast-color($nav-color);
+			opacity: 1;
 		}
 	}
 

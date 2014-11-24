@@ -851,11 +851,11 @@ button, input[type="submit"] {
   height: 100%;
   transition-duration: .3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
-  button:hover, input[type="submit"]:hover {
+  button:not([g~="disabled"]):hover, input[type="submit"]:not([g~="disabled"]):hover {
     filter: none;
     box-shadow: none;
     background: #e5e5e5; }
-  button:active, input[type="submit"]:active {
+  button:not([g~="disabled"]):active, input[type="submit"]:not([g~="disabled"]):active {
     background: #bfbfbf;
     box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3); }
   button[g~="primary"], input[type="submit"][g~="primary"] {
@@ -863,44 +863,43 @@ button, input[type="submit"] {
     border-color: #1c86bc;
     background: #2CA3DF;
     color: white; }
-    button[g~="primary"]:hover, input[type="submit"][g~="primary"]:hover {
+    button[g~="primary"]:not([g~="disabled"]):hover, input[type="submit"][g~="primary"]:not([g~="disabled"]):hover {
       background: #6ec0e9; }
-    button[g~="primary"]:active, input[type="submit"][g~="primary"]:active {
+    button[g~="primary"]:not([g~="disabled"]):active, input[type="submit"][g~="primary"]:not([g~="disabled"]):active {
       background: #1976a5; }
-  button[g~="success"], input[type="submit"][g~="success"] {
+  button[g~="success"]:not([g~="disabled"]), input[type="submit"][g~="success"]:not([g~="disabled"]) {
     /* If background is dark, then make color lighter */
     border-color: #9fb321;
     background: #c1d82f;
     color: white; }
-    button[g~="success"]:hover, input[type="submit"][g~="success"]:hover {
+    button[g~="success"]:not([g~="disabled"]):not([g~="disabled"]):hover, input[type="submit"][g~="success"]:not([g~="disabled"]):not([g~="disabled"]):hover {
       background: #d4e46f; }
-    button[g~="success"]:active, input[type="submit"][g~="success"]:active {
+    button[g~="success"]:not([g~="disabled"]):not([g~="disabled"]):active, button[g~="success"]:not([g~="disabled"]):not([g~="disabled"]).st-activated, input[type="submit"][g~="success"]:not([g~="disabled"]):not([g~="disabled"]):active, input[type="submit"][g~="success"]:not([g~="disabled"]):not([g~="disabled"]).st-activated {
       background: #8c9d1d; }
-  button[g~="warning"], input[type="submit"][g~="warning"] {
+  button[g~="warning"]:not([g~="disabled"]), input[type="submit"][g~="warning"]:not([g~="disabled"]) {
     /* If background is dark, then make color lighter */
     border-color: #f79c05;
     background: #fbb034;
     color: white; }
-    button[g~="warning"]:hover, input[type="submit"][g~="warning"]:hover {
+    button[g~="warning"]:not([g~="disabled"]):not([g~="disabled"]):hover, input[type="submit"][g~="warning"]:not([g~="disabled"]):not([g~="disabled"]):hover {
       background: #fccd7f; }
-    button[g~="warning"]:active, input[type="submit"][g~="warning"]:active {
+    button[g~="warning"]:not([g~="disabled"]):not([g~="disabled"]):active, input[type="submit"][g~="warning"]:not([g~="disabled"]):not([g~="disabled"]):active {
       background: #de8c04; }
-  button[g~="danger"], input[type="submit"][g~="danger"] {
+  button[g~="danger"]:not([g~="disabled"]), input[type="submit"][g~="danger"]:not([g~="disabled"]) {
     /* If background is dark, then make color lighter */
     border-color: #8a2000;
     background: #BD2C00;
     color: white; }
-    button[g~="danger"]:hover, input[type="submit"][g~="danger"]:hover {
+    button[g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):hover, input[type="submit"][g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):hover {
       background: #ff430b; }
-    button[g~="danger"]:active, input[type="submit"][g~="danger"]:active {
+    button[g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):active, input[type="submit"][g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):active {
       background: #711a00; }
   button[g~="disabled"], input[type="submit"][g~="disabled"] {
     border: 0;
     background-image: none;
     opacity: .4;
     cursor: not-allowed;
-    box-shadow: none;
-    background: #f2f2f2; }
+    box-shadow: none; }
   button[g~="grouped"], input[type="submit"][g~="grouped"] {
     position: relative;
     vertical-align: middle; }
@@ -944,11 +943,16 @@ button, input[type="submit"] {
   [g~="grouped"] > button:last-child:not(:first-child) {
     border-radius: 4px 4px 4px 0; }
 
+@media screen and (max-width: 767px) {
+  button, input {
+    margin: 1em; }
+
+  label {
+    margin: 1em; } }
 /* --- FORMS */
 input[type='checkbox'], input[type='radio'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='tel'], input[type='color'], select {
   /* Fields without text */
-  display: inline;
-  margin: 1%; }
+  display: inline-flex; }
 
 input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea {
   /* All fields */
@@ -963,6 +967,8 @@ input[type='text'], input[type='password'], input[type='email'], input[type='url
   text-overflow: ellipsis;
   color: #333;
   background: #fff;
+  margin-left: .5em;
+  margin-right: .5em;
   border: #ccc 1px solid;
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
@@ -990,21 +996,18 @@ input[type='checkbox'], input[type='radio'], input[type='text'], input[type='pas
 [g~="grouped"] > input[type='text'], [g~="grouped"] > input[type='email'], [g~="grouped"] > input[type='password'], [g~="grouped"] > input[type='submit'], [g~="grouped"] > button {
   width: 100%;
   flex-basis: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   border-radius: 0; }
   [g~="grouped"] > input[type='text']:first-child, [g~="grouped"] > input[type='email']:first-child, [g~="grouped"] > input[type='password']:first-child, [g~="grouped"] > input[type='submit']:first-child, [g~="grouped"] > button:first-child {
-    display: block;
     margin-bottom: 0;
     border-radius: 3px 3px 0 0; }
   [g~="grouped"] > input[type='text']:last-child, [g~="grouped"] > input[type='email']:last-child, [g~="grouped"] > input[type='password']:last-child, [g~="grouped"] > input[type='submit']:last-child, [g~="grouped"] > button:last-child {
-    display: block;
     margin-top: 0;
     border-radius: 0 0 3px 3px; }
-[g~="grouped"] > button {
-  border-radius: 0 0 3px 3px !important; }
+  [g~="grouped"] > input[type='text'] > button, [g~="grouped"] > input[type='email'] > button, [g~="grouped"] > input[type='password'] > button, [g~="grouped"] > input[type='submit'] > button, [g~="grouped"] > button > button {
+    border-radius: 0 0 3px 3px !important; }
 
-/* -- MISC */
+/* -- Labels */
 label[for] {
   padding: 1em;
   cursor: pointer; }
@@ -1015,13 +1018,6 @@ fieldset {
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
   border-radius: 0.3em; }
-
-table th, table td {
-  padding: 1rem;
-  border-bottom: 1px solid #eee; }
-
-table > tbody {
-  color: #ddd; }
 
 /* Header should wrap content */
 @media screen and (max-width: 767px) {
@@ -1045,16 +1041,16 @@ header {
       margin: 0 2em;
       color: #e6e6e6;
       font-weight: bold; }
-      header ul li a, header ul.active li a {
-        padding: 1em;
-        transition: .3s;
-        color: #e6e6e6; }
-        header ul li a:hover:not([g~="active"]), header ul.active li a:hover:not([g~="active"]) {
-          /* Darker navs should have brighter feedback */
-          color: white; }
-        header ul li a[g~="active"], header ul li a [g~="active"]:hover, header ul li a [g~="active"]:active, header ul.active li a[g~="active"], header ul.active li a [g~="active"]:hover, header ul.active li a [g~="active"]:active {
-          color: white;
-          opacity: 1; }
+  header a {
+    padding: 1em;
+    transition: .3s;
+    color: #e6e6e6; }
+    header a:hover:not([g~="active"]) {
+      /* Darker navs should have brighter feedback */
+      color: white; }
+    header a[g~="active"], header a [g~="active"]:hover, header a [g~="active"]:active {
+      color: white;
+      opacity: 1; }
   header[g~="fixed"] {
     position: fixed; }
   header img {
@@ -1165,10 +1161,12 @@ nav[g~="grouped"][g~='dropdown'] > li:hover {
   text-align: center; }
 
 [g~="left"] {
-  text-align: left; }
+  text-align: left;
+  justify-content: start; }
 
 [g~="right"] {
-  text-align: right; }
+  text-align: right;
+  justify-content: end; }
 
 alert {
   padding: 1em;
@@ -1249,10 +1247,19 @@ alert {
     padding: 1em 0;
     background: #FFF; }
   .modal .content {
-    margin-bottom: 15em; }
+    margin-bottom: 15em;
+    padding: 0 1em; }
   .modal .header {
-    padding: 1em;
-    text-align: center; }
+    text-align: center;
+    background: #fff; }
+    .modal .header > * {
+      padding: 1em; }
+    .modal .header[g~="fixed"] {
+      width: 50%;
+      position: fixed;
+      background: #fff;
+      opacity: 0.9;
+      filter: blur(10px); }
 
 .modal_bg {
   background: rgba(0, 0, 0, 0.5);
@@ -1264,7 +1271,6 @@ alert {
 .modal_box {
   width: 50%;
   height: auto;
-  padding: 1em;
   border: 0.15em solid #eee;
   border-radius: 3px;
   background: #fff;
@@ -1290,6 +1296,12 @@ label:not([for]) {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.3em; }
+
+table {
+  color: #000; }
+  table thead th, table tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee; }
 
 /*---- PLUGINS */
 /* Add this attribute to the element that needs a tooltip */

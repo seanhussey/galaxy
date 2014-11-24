@@ -2,8 +2,7 @@
 
 input[type='checkbox'], input[type='radio'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='tel'], input[type='color'], select {
 	/* Fields without text */
-	display: inline;
-	margin: 1%;
+	display: inline-flex;
 }
 
 input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea {
@@ -19,6 +18,8 @@ input[type='text'], input[type='password'], input[type='email'], input[type='url
 	text-overflow: ellipsis;
 	color: #333;
 	background: #fff;
+	margin-left: .5em;
+	margin-right: .5em;
 	@include dark-border;
 	@include border-box;
 	@include no-appearance;
@@ -44,26 +45,24 @@ input[type='checkbox'], input[type='radio'], input[type='text'], input[type='pas
 	& > input[type='text'], & > input[type='email'], & > input[type='password'], & > input[type='submit'], & > button {
 	width: 100%;
 	flex-basis: 100%;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0;
 	border-radius: 0;
 	&:first-child {
-		display: block;
 		margin-bottom: 0;
 		border-radius: 3px 3px 0 0;
 	}
 	&:last-child {
-		display: block;
 		margin-top: 0;
 		border-radius: 0 0 3px 3px;
 	}
-	}
-	& > button {
-	border-radius: 0 0 3px 3px !important;
+		& > button {
+			border-radius: 0 0 3px 3px !important;
+		}
 	}
 }
+	
 
-/* -- MISC */
+/* -- Labels */
 label[for] {
 	padding: $md-padding;
 	cursor: pointer;
@@ -72,13 +71,4 @@ label[for] {
 fieldset {
 	padding: $sm-padding;
 	@include light-border;
-}
-
-table th, table td {
-	padding: 1rem;
-	border-bottom: 1px solid $light-shadow;
-}
-
-table > tbody {
-	color: $dark-shadow;
 }

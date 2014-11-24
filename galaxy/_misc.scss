@@ -1,5 +1,6 @@
 @import "misc/alerts";
 @import "misc/modals";
+@import "misc/typography";
 
 label:not([for]) {
 	display: inline;
@@ -14,3 +15,10 @@ label:not([for]) {
 }
 
 
+table {
+    color: #000;
+    & thead th, tbody td {
+    	padding: 1rem;
+		border-bottom: 1px solid $light-shadow;
+	}
+}

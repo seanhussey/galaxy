@@ -17,52 +17,52 @@ button, input[type="submit"] {
 	transition-duration: .3s;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Material design
 
-	&:hover {
+	&:not([g~="disabled"]):hover {
 		filter: none;
 		box-shadow: none;
 		background: darken($default-color, 5);
 	}
-	&:active {
+	&:not([g~="disabled"]):active {
 		background: darken($default-color, 20);
 		box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
 	}
 
 	&[g~="primary"] {
 		@include button-colors($primary-color);
-		&:hover {
+		&:not([g~="disabled"]):hover {
 			background: lighten($primary-color, 15);
 		}
-		&:active {
+		&:not([g~="disabled"]):active {
 			background: darken($primary-color, 15);
 		}
 	}
 
-	&[g~="success"] {
+	&[g~="success"]:not([g~="disabled"]) {
 		@include button-colors($success-color);
-		&:hover {
+		&:not([g~="disabled"]):hover {
 			background: lighten($success-color, 15);
 		}
-		&:active {
+		&:not([g~="disabled"]):active, &:not([g~="disabled"]).st-activated {
 			background: darken($success-color, 15);
 		}
 	}
 
-	&[g~="warning"] {
+	&[g~="warning"]:not([g~="disabled"]) {
 		@include button-colors($warning-color);
-		&:hover {
+		&:not([g~="disabled"]):hover {
 			background: lighten($warning-color, 15);
 		}
-		&:active {
+		&:not([g~="disabled"]):active {
 			background: darken($warning-color, 15);
 		}
 	}
 
-	&[g~="danger"] {
+	&[g~="danger"]:not([g~="disabled"]) {
 		@include button-colors($danger-color);
-		&:hover {
+		&:not([g~="disabled"]):hover {
 			background: lighten($danger-color, 15);
 		}
-		&:active {
+		&:not([g~="disabled"]):active {
 			background: darken($danger-color, 15);
 		}
 	}
@@ -73,7 +73,7 @@ button, input[type="submit"] {
 		opacity: .4;
 		cursor: not-allowed;
 		box-shadow: none;
-		background: $default-color;
+		
 	}
 	&[g~="grouped"] {
 		position: relative;
@@ -127,5 +127,15 @@ button, input[type="submit"] {
 	}
 	& > button:last-child:not(:first-child) {
 		border-radius: 4px 4px 4px 0;
+	}
+}
+
+
+@media screen and (max-width: $md-breakpoint) {
+	button, input {
+		margin: 1em;
+	}
+	label {
+		margin: 1em;
 	}
 }

@@ -46,8 +46,11 @@
 
 [g~="left"] {
 	text-align: left;
+	justify-content: start;
 }
 
 [g~="right"] {
 	text-align: right;
+	justify-content: end;
+
 }
