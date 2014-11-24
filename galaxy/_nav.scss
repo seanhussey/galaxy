@@ -1,42 +1,62 @@
 /* Header should wrap content */
 
+
+
+
 header {
 	top: 0;
 	margin: 0;
+	position: relative;
 	opacity: 1;
 	background-color: $nav-color;
 	color: darken(contrast-color($nav-color), 50);
 	width: 100%;
 	z-index: 1;
 	display: inline-flex;
+	transition: .5s;
+
+	&.expanded {
+		
+		& nav {
+			display: flex;
+			overflow-y: hidden;
+			max-height: 500px; /* approximate max height */
+			transition-property: all;
+			transition-duration: .5s;
+			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+		}
+	}
 
 	& a[g~="toggle"] {
+		display: none;
+		cursor: pointer;
 		margin: auto;
 		position: absolute;
 		top: 0;
 		left: 0;
 		font-size: 1.5em;
+
 	}
-	& nav ul {
-		@include align-items(center);
-		margin: 0;
-		display: inline-flex;
-		&.active {
-			display: flex;
+
+
+	& nav {
+		max-height: 0;
+			& ul {
+				@include align-items(center);
+				margin: 0;
 			& li {
-				justify-content: center;
+				justify-content: center;	
+			}
+			& li {
+				line-height: 5em;
+				color: darken(contrast-color($nav-color), 10);
+				font-weight: bold;
 			}
 		}
-		& li {
-			line-height: 5em;
-			color: darken(contrast-color($nav-color), 10);
-			font-weight: bold;
-			}
-		
 	}
 
 	& a {
-		padding: 1em;
+		padding: 1em 1.5em;
 		transition: .3s;
 		color: darken(contrast-color($nav-color), 10);
 		&:hover:not([g~="active"]) {
@@ -58,15 +78,11 @@ header {
 		position: fixed;
 	}
 
-	& img {
+	& img.logo {
 		height: 3em;
 		width: auto;
 		vertical-align: middle;
 	}
-}
-
-[g~="active"] {
-	color: $primary-color;
 }
 
 footer {
@@ -125,16 +141,33 @@ nav[g~='grouped'] > ul {
 	}
 }
 
+
 @media screen and (max-width: $md-breakpoint){
 	header {
+
 		& a.logo {
 			margin: auto;
 		}
 		& nav {
 			display: none;
+			transition: .5s;
 		}
 		& a[g~="toggle"] {
-			display: none;
+			display: flex;
+		}
+
+		&.expanded {
+			a.logo {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $md-breakpoint) {
+	header {
+		ul {
+			display: flex;
 		}
 	}
 }
