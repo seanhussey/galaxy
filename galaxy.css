@@ -1136,9 +1136,6 @@ fieldset {
   border-radius: 0.3em; }
 
 /* Header should wrap content */
-@media screen and (max-width: 767px) {
-  header ul:not(:first-child) {
-    display: none; } }
 header {
   top: 0;
   margin: 0;
@@ -1146,15 +1143,25 @@ header {
   background-color: #000;
   color: gray;
   width: 100%;
-  z-index: 1; }
-  header ul, header ul.active {
+  z-index: 1;
+  display: inline-flex; }
+  header a[g~="toggle"] {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5em; }
+  header nav ul {
     -webkit-align-items: center;
     align-items: center;
-    display: inline-flex;
-    margin: 0; }
-    header ul li, header ul.active li {
+    margin: 0;
+    display: inline-flex; }
+    header nav ul.active {
+      display: flex; }
+      header nav ul.active li {
+        justify-content: center; }
+    header nav ul li {
       line-height: 5em;
-      margin: 0 2em;
       color: #e6e6e6;
       font-weight: bold; }
   header a {
@@ -1220,27 +1227,19 @@ nav[g~='grouped'] > ul {
   box-shadow: 0 1px 2px rgba(113, 125, 130, 0.1); }
   nav[g~='grouped'] > ul > li {
     line-height: 1.4;
-    display: block;
     clear: both;
     padding: 6px 20px;
     cursor: pointer;
     white-space: nowrap;
     opacity: .8; }
 
-nav[g~="grouped"] > ul {
-  margin-top: 3em;
-  margin-left: 5.5em; }
-nav[g~="grouped"] > span[g~="arrow"] {
-  left: 50%;
-  margin-left: -7px;
-  position: absolute;
-  top: -8px;
-  background-position: -727px 0;
-  height: 9px;
-  width: 15px; }
-nav[g~="grouped"][g~='dropdown'] > li:hover {
-  background: #eee; }
-
+@media screen and (max-width: 767px) {
+  header a.logo {
+    margin: auto; }
+  header nav {
+    display: none; }
+  header a[g~="toggle"] {
+    display: none; } }
 [g~="inline-block"] {
   display: inline-block !important; }
 

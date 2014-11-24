@@ -1,12 +1,5 @@
 /* Header should wrap content */
 
-@media screen and (max-width: $md-breakpoint){
-	header ul:not(:first-child) {
-		display: none;
-	}
-}
-
-
 header {
 	top: 0;
 	margin: 0;
@@ -15,17 +8,32 @@ header {
 	color: darken(contrast-color($nav-color), 50);
 	width: 100%;
 	z-index: 1;
-	& ul, & ul.active {
+	display: inline-flex;
+
+	& a[g~="toggle"] {
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 1.5em;
+	}
+	& nav ul {
 		@include align-items(center);
-		display: inline-flex;
 		margin: 0;
+		display: inline-flex;
+		&.active {
+			display: flex;
+			& li {
+				justify-content: center;
+			}
+		}
 		& li {
 			line-height: 5em;
-			margin: 0 2em;
 			color: darken(contrast-color($nav-color), 10);
 			font-weight: bold;
 			}
-		}
+		
+	}
 
 	& a {
 		padding: 1em;
@@ -109,7 +117,6 @@ nav[g~='grouped'] > ul {
 	box-shadow: 0 1px 2px rgba(113, 125, 130, .1);
 	& > li {
 		line-height: 1.4;
-		display: block;
 		clear: both;
 		padding: 6px 20px;
 		cursor: pointer;
@@ -118,21 +125,16 @@ nav[g~='grouped'] > ul {
 	}
 }
 
-nav[g~="grouped"] {
-	& > ul {
-		margin-top: 3em;
-		margin-left: 5.5em;
-	}
-	& > span[g~="arrow"] {
-		left: 50%;
-		margin-left: -7px;
-		position: absolute;
-		top: -8px;
-		background-position: -727px 0;
-		height: 9px;
-		width: 15px;
-	}
-	&[g~='dropdown'] > li:hover {
-		background: #eee;
+@media screen and (max-width: $md-breakpoint){
+	header {
+		& a.logo {
+			margin: auto;
+		}
+		& nav {
+			display: none;
+		}
+		& a[g~="toggle"] {
+			display: none;
+		}
 	}
 }
