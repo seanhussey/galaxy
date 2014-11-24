@@ -27,18 +27,15 @@ input[type='text'], input[type='password'], input[type='email'], input[type='url
 input[type='checkbox'], input[type='radio'], input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='number'], input[type='search'], input[type='tel'], textarea {
 		/* All fields with text */
 		border: $light-shadow 1px solid;
-		font-weight: bold;
-
 		&:hover {
 			box-shadow: inset 0 1px 3px $light-shadow;
 	}
 	&:focus {
-	border: $primary-color 1px solid;
-	box-shadow: inset 0 1px 3px $light-shadow;
-	box-shadow: none;
+		border: $primary-color 1px solid;
+		box-shadow: inset 0 1px 3px $light-shadow;
 	}
 	&:focus:invalid {
-	 border: darken($default-color, 25) 1px solid;
+	 	border: darken($default-color, 25) 1px solid;
 	}
 }
 
