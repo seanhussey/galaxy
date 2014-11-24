@@ -519,51 +519,51 @@ section, p, h1, h2, h3, h4, h5, h6 {
   [g~="xlg-12"] {
     width: 100%;
     float: left; } }
-.galaxy [g~="offset-1"] {
+.active [g~="offset-1"] {
   margin-left: 8.33333%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-2"] {
+.active [g~="offset-2"] {
   margin-left: 16.66667%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-3"] {
+.active [g~="offset-3"] {
   margin-left: 25%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-4"] {
+.active [g~="offset-4"] {
   margin-left: 33.33333%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-5"] {
+.active [g~="offset-5"] {
   margin-left: 41.66667%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-6"] {
+.active [g~="offset-6"] {
   margin-left: 50%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-7"] {
+.active [g~="offset-7"] {
   margin-left: 58.33333%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-8"] {
+.active [g~="offset-8"] {
   margin-left: 66.66667%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-9"] {
+.active [g~="offset-9"] {
   margin-left: 75%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-10"] {
+.active [g~="offset-10"] {
   margin-left: 83.33333%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-11"] {
+.active [g~="offset-11"] {
   margin-left: 91.66667%;
   transition-duration: 3s; }
 
-.galaxy [g~="offset-12"] {
+.active [g~="offset-12"] {
   margin-left: 100%;
   transition-duration: 3s; }
 
@@ -1165,8 +1165,12 @@ nav[g~="grouped"][g~='dropdown'] > li:hover {
   justify-content: start; }
 
 [g~="right"] {
-  text-align: right;
-  justify-content: end; }
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
 
 alert {
   padding: 1em;
@@ -1175,6 +1179,7 @@ alert {
   border-radius: 0.3em;
   font-size: .9em;
   display: block;
+  margin-bottom: 1em;
   color: #727272;
   background: #f2f2f2;
   border: #b2b2b2 1px solid; }
@@ -1287,15 +1292,16 @@ alert {
     top: 0; }
 
 label:not([for]) {
-  display: inline;
-  padding: .6em 1em .6em;
-  font-size: .95em;
+  padding: .6rem 1rem .6rem;
+  font-size: .95rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.3em; }
+  label:not([for]) sup {
+    padding: .6rem .6rem 0 .5rem; }
 
 table {
   color: #000; }

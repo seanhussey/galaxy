@@ -76,7 +76,7 @@
 @mixin grid_offset {
 		@for $i from 1 through 12 {
 				$size: $i / 12 * 100%;
-				.galaxy [g~="offset-#{$i}"] {
+				.active [g~="offset-#{$i}"] {
 						margin-left: $size;
 						transition-duration: 3s;
 				}

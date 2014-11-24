@@ -5,6 +5,7 @@ alert {
 	border-radius: $md-border-radius;
 	font-size: .9em;
 	display: block;
+	margin-bottom: $md-margin;
 	@include alert-color($light-default-color);
 	&[g~="primary"] {
 		@include alert-color($light-primary-color);
