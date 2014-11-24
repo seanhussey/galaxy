@@ -18,8 +18,10 @@
 				$size: $i / 12 * 100%;
 				@media screen and (min-width: $xsm-breakpoint) {
 						[g~="xsm-#{$i}"] {
-								width: $size;
-								float: left;
+								-webkit-flex-basis: $size;
+								-ms-flex-preferred-size: $size;
+								flex-basis: $size;
+								max-width: $size;
 						}
 				}
 		}
@@ -28,10 +30,12 @@
 @mixin sm_grid_columns {
 		@for $i from 1 through 12 {
 				$size: $i / 12 * 100%;
-				@media screen and (min-width: $sm-breakpoint) {
+				@media screen and (max-width: $sm-breakpoint) {
 						[g~="sm-#{$i}"] {
-								width: $size;
-								float: left;
+								-webkit-flex-basis: $size;
+								-ms-flex-preferred-size: $size;
+								flex-basis: $size;
+								max-width: $size;
 						}
 				}
 		}
@@ -40,10 +44,12 @@
 @mixin md_grid_columns {
 		@for $i from 1 through 12 {
 				$size: $i / 12 * 100%;
-				@media screen and (min-width: $md-breakpoint) {
+				@media screen and (max-width: $md-breakpoint) {
 						[g~="md-#{$i}"] {
-								width: $size;
-								float: left;
+								-webkit-flex-basis: $size;
+								-ms-flex-preferred-size: $size;
+								flex-basis: $size;
+								max-width: $size;
 						}
 				}
 		}
@@ -52,10 +58,12 @@
 @mixin lg_grid_columns {
 		@for $i from 1 through 12 {
 				$size: $i / 12 * 100%;
-				@media screen and (min-width: $lg-breakpoint) {
+				@media screen and (max-width: $lg-breakpoint) {
 						[g~="lg-#{$i}"] {
-								width: $size;
-								float: left;
+								-webkit-flex-basis: $size;
+								-ms-flex-preferred-size: $size;
+								flex-basis: $size;
+								max-width: $size;
 						}
 				}
 		}
@@ -64,10 +72,12 @@
 @mixin xlg_grid_columns {
 		@for $i from 1 through 12 {
 				$size: $i / 12 * 100%;
-				@media screen and (min-width: $xlg-breakpoint) {
+				@media screen and (max-width: $xlg-breakpoint) {
 						[g~="xlg-#{$i}"] {
-								width: $size;
-								float: left;
+								-webkit-flex-basis: $size;
+								-ms-flex-preferred-size: $size;
+								flex-basis: $size;
+								max-width: $size;
 						}
 				}
 		}
@@ -317,10 +327,6 @@ section, p, h1, h2, h3, h4, h5, h6 {
 
 [g~="inline"] {
 		display: inline-flex;
-}
-
-[g~="inline-block"] {
-		display: block;
 }
 
 [g~="block"] {

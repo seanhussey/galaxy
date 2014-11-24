@@ -281,244 +281,364 @@ section, p, h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 259px) {
   [g~="xsm-1"] {
-    width: 8.33333%;
-    float: left; } }
+    -webkit-flex-basis: 8.33333%;
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-2"] {
-    width: 16.66667%;
-    float: left; } }
+    -webkit-flex-basis: 16.66667%;
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-3"] {
-    width: 25%;
-    float: left; } }
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-4"] {
-    width: 33.33333%;
-    float: left; } }
+    -webkit-flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-5"] {
-    width: 41.66667%;
-    float: left; } }
+    -webkit-flex-basis: 41.66667%;
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-6"] {
-    width: 50%;
-    float: left; } }
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-7"] {
-    width: 58.33333%;
-    float: left; } }
+    -webkit-flex-basis: 58.33333%;
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-8"] {
-    width: 66.66667%;
-    float: left; } }
+    -webkit-flex-basis: 66.66667%;
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-9"] {
-    width: 75%;
-    float: left; } }
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-10"] {
-    width: 83.33333%;
-    float: left; } }
+    -webkit-flex-basis: 83.33333%;
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-11"] {
-    width: 91.66667%;
-    float: left; } }
+    -webkit-flex-basis: 91.66667%;
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; } }
 @media screen and (min-width: 259px) {
   [g~="xsm-12"] {
-    width: 100%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-1"] {
-    width: 8.33333%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 8.33333%;
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-2"] {
-    width: 16.66667%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 16.66667%;
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-3"] {
-    width: 25%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-4"] {
-    width: 33.33333%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-5"] {
-    width: 41.66667%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 41.66667%;
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-6"] {
-    width: 50%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-7"] {
-    width: 58.33333%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 58.33333%;
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-8"] {
-    width: 66.66667%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 66.66667%;
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-9"] {
-    width: 75%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-10"] {
-    width: 83.33333%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 83.33333%;
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-11"] {
-    width: 91.66667%;
-    float: left; } }
-@media screen and (min-width: 448px) {
+    -webkit-flex-basis: 91.66667%;
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; } }
+@media screen and (max-width: 448px) {
   [g~="sm-12"] {
-    width: 100%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; } }
+@media screen and (max-width: 767px) {
   [g~="md-1"] {
-    width: 8.33333%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 8.33333%;
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; } }
+@media screen and (max-width: 767px) {
   [g~="md-2"] {
-    width: 16.66667%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 16.66667%;
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; } }
+@media screen and (max-width: 767px) {
   [g~="md-3"] {
-    width: 25%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; } }
+@media screen and (max-width: 767px) {
   [g~="md-4"] {
-    width: 33.33333%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
+@media screen and (max-width: 767px) {
   [g~="md-5"] {
-    width: 41.66667%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 41.66667%;
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; } }
+@media screen and (max-width: 767px) {
   [g~="md-6"] {
-    width: 50%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; } }
+@media screen and (max-width: 767px) {
   [g~="md-7"] {
-    width: 58.33333%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 58.33333%;
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; } }
+@media screen and (max-width: 767px) {
   [g~="md-8"] {
-    width: 66.66667%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 66.66667%;
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; } }
+@media screen and (max-width: 767px) {
   [g~="md-9"] {
-    width: 75%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%; } }
+@media screen and (max-width: 767px) {
   [g~="md-10"] {
-    width: 83.33333%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 83.33333%;
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; } }
+@media screen and (max-width: 767px) {
   [g~="md-11"] {
-    width: 91.66667%;
-    float: left; } }
-@media screen and (min-width: 767px) {
+    -webkit-flex-basis: 91.66667%;
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; } }
+@media screen and (max-width: 767px) {
   [g~="md-12"] {
-    width: 100%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-1"] {
-    width: 8.33333%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 8.33333%;
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-2"] {
-    width: 16.66667%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 16.66667%;
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-3"] {
-    width: 25%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-4"] {
-    width: 33.33333%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-5"] {
-    width: 41.66667%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 41.66667%;
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-6"] {
-    width: 50%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-7"] {
-    width: 58.33333%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 58.33333%;
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-8"] {
-    width: 66.66667%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 66.66667%;
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-9"] {
-    width: 75%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-10"] {
-    width: 83.33333%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 83.33333%;
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-11"] {
-    width: 91.66667%;
-    float: left; } }
-@media screen and (min-width: 970px) {
+    -webkit-flex-basis: 91.66667%;
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; } }
+@media screen and (max-width: 970px) {
   [g~="lg-12"] {
-    width: 100%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-1"] {
-    width: 8.33333%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 8.33333%;
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-2"] {
-    width: 16.66667%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 16.66667%;
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-3"] {
-    width: 25%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-4"] {
-    width: 33.33333%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-5"] {
-    width: 41.66667%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 41.66667%;
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-6"] {
-    width: 50%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-7"] {
-    width: 58.33333%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 58.33333%;
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-8"] {
-    width: 66.66667%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 66.66667%;
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-9"] {
-    width: 75%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-10"] {
-    width: 83.33333%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 83.33333%;
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-11"] {
-    width: 91.66667%;
-    float: left; } }
-@media screen and (min-width: 1440px) {
+    -webkit-flex-basis: 91.66667%;
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; } }
+@media screen and (max-width: 1440px) {
   [g~="xlg-12"] {
-    width: 100%;
-    float: left; } }
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; } }
 .active [g~="offset-1"] {
   margin-left: 8.33333%;
   transition-duration: 3s; }
@@ -825,9 +945,6 @@ section, p, h1, h2, h3, h4, h5, h6 {
 [g~="inline"] {
   display: inline-flex; }
 
-[g~="inline-block"] {
-  display: block; }
-
 [g~="block"] {
   display: flex; }
 
@@ -848,7 +965,7 @@ button, input[type="submit"] {
   height: initial;
   text-align: center;
   font-weight: bold;
-  height: 100%;
+  height: auto;
   transition-duration: .3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
   button:not([g~="disabled"]):hover, input[type="submit"]:not([g~="disabled"]):hover {
@@ -1308,6 +1425,10 @@ table {
   table thead th, table tbody td {
     padding: 1rem;
     border-bottom: 1px solid #eee; }
+  table tbody tr:hover {
+    background: #eee; }
+  table [g~="highlight"] {
+    background: #eee; }
 
 /*---- PLUGINS */
 /* Add this attribute to the element that needs a tooltip */
