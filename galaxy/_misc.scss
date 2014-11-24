@@ -26,7 +26,4 @@ table {
 	& tbody tr:hover {
 		background: $light-shadow;
 	}
-	& [g~="highlight"] {
-		background: $light-shadow;
-	}
 }

@@ -1427,8 +1427,6 @@ table {
     border-bottom: 1px solid #eee; }
   table tbody tr:hover {
     background: #eee; }
-  table [g~="highlight"] {
-    background: #eee; }
 
 /*---- PLUGINS */
 /* Add this attribute to the element that needs a tooltip */
