@@ -1403,7 +1403,6 @@ alert {
       width: 50%;
       position: fixed;
       background: #fff;
-      opacity: 0.9;
       filter: blur(10px); }
 
 .modal_bg {
