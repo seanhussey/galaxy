@@ -66,7 +66,7 @@ var isFixedModal = $('header').is('[g~="fixed"]'),
     modalHeight = $('header[g~="fixed"]').outerHeight();
 
 if(isFixedModal){
-    $('body').css({
+    $('.modal_box .content').css({
         marginTop: modalHeight + 'px'
     });
 }
