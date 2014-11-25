@@ -18,17 +18,14 @@ header {
 	&.expanded {
 		
 		& nav {
-			display: flex;
 			overflow-y: hidden;
-			max-height: 500px; /* approximate max height */
-			transition-property: all;
-			transition-duration: .5s;
-			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+			display: flex;
+			height: auto;
+			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
 		}
 	}
 
 	& a[g~="toggle"] {
-		display: none;
 		cursor: pointer;
 		margin: auto;
 		position: absolute;
@@ -40,7 +37,10 @@ header {
 
 
 	& nav {
-		max-height: 0;
+		height: 0;
+		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 			& ul {
 				@include align-items(center);
 				margin: 0;
@@ -149,8 +149,8 @@ nav[g~='grouped'] > ul {
 			margin: auto;
 		}
 		& nav {
-			display: none;
-			transition: .5s;
+			height: 0;
+			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
 		}
 		& a[g~="toggle"] {
 			display: flex;

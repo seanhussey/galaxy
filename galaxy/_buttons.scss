@@ -79,7 +79,7 @@ button, input[type="submit"] {
 		vertical-align: middle;
 	}
 	&[g~="large"] {
-		padding: 1.2em 2.5em;
+		padding: 1.2em 2.3em;
 		font-size: 1.2em;
 	}
 	&[g~="small"] {
@@ -89,35 +89,40 @@ button, input[type="submit"] {
 	&[g~="rounded"] {
 		border-radius: $lg-border-radius;
 	}
-	&[g~="dropdown"] {
+}
 
-		 & + ul {
-		 	display: none;
-			top: 100%;
-			left: 0;
-			@include border-box;
-			width: 200px;
-			background: #FFF;
-			color: #666;
-			vertical-align: top;
-			border: 1px solid #D3D3D3;
-			border-radius: 4px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-			padding: 0;
-				& li {
-					padding: $sm-margin $lg-margin;
-					cursor: pointer;
-					&:hover {
-						background: #eee;
-					}
-				}
-			}
-			&.st-activated + ul {
-				display: block;
+div[g~="dropdown"] {
+	position: relative;
+	& button {
+
+	& + ul {
+		display: none;
+		top: 3em;
+		left: 0;
+		@include border-box;
+		width: 200px;
+		background: #FFF;
+		color: #666;
+		vertical-align: top;
+		border: 1px solid #D3D3D3;
+		border-radius: 4px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		padding: 0;
+		position: absolute;
+		& li {
+			padding: $sm-margin $lg-margin;
+			cursor: pointer;
+			&:hover {
+				background: #eee;
 			}
 		}
-
 	}
+	&.st-activated + ul {
+		display: block;
+	}
+}
+}
+
 
 [g~="grouped"] {
 	width: 100vw;

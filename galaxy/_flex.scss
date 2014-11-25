@@ -298,6 +298,14 @@ section, p, h1, h2, h3, h4, h5, h6 {
 		align-items: flex-end;
 }
 
+[g~="stretch"] {
+		align-items: stretch;
+}
+
+[g~="baseline"] {
+		align-items: baseline;
+}
+
 [g~="around"] {
 		-webkit-justify-content: space-around;
 		-ms-flex-pack: distribute;
