@@ -26,7 +26,7 @@ header {
 	}
 
 	& a[g~="toggle"] {
-		display: none;
+		display: flex;
 		cursor: pointer;
 		margin: auto;
 		position: absolute;

@@ -1167,7 +1167,7 @@ header {
     height: auto;
     transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
   header a[g~="toggle"] {
-    display: none;
+    display: flex;
     cursor: pointer;
     margin: auto;
     position: absolute;
