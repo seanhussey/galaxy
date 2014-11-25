@@ -1043,7 +1043,7 @@ div[g~="dropdown"] {
   position: relative; }
   div[g~="dropdown"] button + ul {
     display: none;
-    top: 3em;
+    top: 3px;
     left: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
