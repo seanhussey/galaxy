@@ -1,5 +1,7 @@
 /* Header should wrap content */
 
+
+
 header {
 	top: 0;
 	margin: 0;
@@ -12,16 +14,6 @@ header {
 	display: inline-flex;
 	transition: .5s;
 
-	&.expanded {
-		
-		& nav {
-			overflow-y: hidden;
-			display: flex;
-			height: auto;
-			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
-		}
-	}
-
 	& a[g~="toggle"] {
 		display: none;
 		cursor: pointer;
@@ -30,8 +22,29 @@ header {
 		top: 0;
 		left: 0;
 		font-size: 1.5em;
+	}
+
+	&.expanded {
+		
+		& nav {
+			overflow-y: hidden;
+			display: flex;
+			height: auto;
+			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
+		}
+		& a[g~="toggle"] {
+			display: flex;
+			cursor: pointer;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 1.5em;
+		}
 
 	}
+
+
 
 
 	& nav {
@@ -41,9 +54,7 @@ header {
 				@include align-items(center);
 				margin: 0;
 			& li {
-				justify-content: center;	
-			}
-			& li {
+				justify-content: center;
 				line-height: 5em;
 				color: darken(contrast-color($nav-color), 10);
 				font-weight: bold;
@@ -137,7 +148,6 @@ nav[g~='grouped'] > ul {
 	}
 }
 
-
 @media screen and (max-width: $md-breakpoint){
 	header {
 
@@ -145,6 +155,7 @@ nav[g~='grouped'] > ul {
 			margin: auto;
 		}
 		& nav {
+			display: none;
 			height: 0;
 			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
 		}

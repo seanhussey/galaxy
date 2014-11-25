@@ -1161,13 +1161,21 @@ header {
   z-index: 1;
   display: inline-flex;
   transition: .5s; }
+  header a[g~="toggle"] {
+    display: none;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5em; }
   header.expanded nav {
     overflow-y: hidden;
     display: flex;
     height: auto;
     transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
-  header a[g~="toggle"] {
-    display: none;
+  header.expanded a[g~="toggle"] {
+    display: flex;
     cursor: pointer;
     margin: auto;
     position: absolute;
@@ -1182,8 +1190,7 @@ header {
       align-items: center;
       margin: 0; }
       header nav ul li {
-        justify-content: center; }
-      header nav ul li {
+        justify-content: center;
         line-height: 5em;
         color: #e6e6e6;
         font-weight: bold; }
@@ -1257,6 +1264,7 @@ nav[g~='grouped'] > ul {
   header a.logo {
     margin: auto; }
   header nav {
+    display: none;
     height: 0;
     transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
   header a[g~="toggle"] {
