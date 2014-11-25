@@ -1171,19 +1171,6 @@ header {
     top: 0;
     left: 0;
     font-size: 1.5em; }
-  header.expanded nav {
-    overflow-y: hidden;
-    display: flex;
-    height: auto;
-    transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
-  header.expanded a[g~="toggle"] {
-    display: flex;
-    cursor: pointer;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1.5em; }
   header nav {
     display: inline-flex;
     transition: 0.5s cubic-bezier(0, 1, 0.5, 1) all; }
@@ -1213,6 +1200,20 @@ header {
     width: auto;
     vertical-align: middle; }
 
+@media screen and (max-width: 767px) {
+  header a.logo {
+    margin: auto; }
+  header nav {
+    display: block;
+    height: 0;
+    transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all;
+    overflow: hidden; }
+  header a[g~="toggle"] {
+    display: flex; }
+  header.expanded nav {
+    height: 15em; }
+  header.expanded a.logo {
+    margin: 0; } }
 footer {
   width: 100%;
   margin-top: 3em;
@@ -1262,17 +1263,6 @@ nav[g~='grouped'] > ul {
     white-space: nowrap;
     opacity: .8; }
 
-@media screen and (max-width: 767px) {
-  header a.logo {
-    margin: auto; }
-  header nav {
-    display: none;
-    height: 0;
-    transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
-  header a[g~="toggle"] {
-    display: flex; }
-  header.expanded a.logo {
-    margin: 0; } }
 @media screen and (min-width: 767px) {
   header ul {
     display: flex; }

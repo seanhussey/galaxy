@@ -1,7 +1,5 @@
 /* Header should wrap content */
 
-
-
 header {
 	top: 0;
 	margin: 0;
@@ -23,29 +21,6 @@ header {
 		left: 0;
 		font-size: 1.5em;
 	}
-
-	&.expanded {
-		
-		& nav {
-			overflow-y: hidden;
-			display: flex;
-			height: auto;
-			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
-		}
-		& a[g~="toggle"] {
-			display: flex;
-			cursor: pointer;
-			margin: auto;
-			position: absolute;
-			top: 0;
-			left: 0;
-			font-size: 1.5em;
-		}
-
-	}
-
-
-
 
 	& nav {
 		display: inline-flex;
@@ -89,6 +64,33 @@ header {
 		height: 3em;
 		width: auto;
 		vertical-align: middle;
+	}
+}
+
+@media screen and (max-width: $md-breakpoint){
+	header {
+
+		& a.logo {
+			margin: auto;
+		}
+		nav {
+			display: block;
+			height: 0;
+			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
+			overflow: hidden;
+		}
+		a[g~="toggle"] {
+			display: flex;
+		}
+
+		&.expanded {
+			nav {
+				height: 15em;
+			}
+			a.logo {
+				margin: 0;
+			}
+		}
 	}
 }
 
@@ -145,29 +147,6 @@ nav[g~='grouped'] > ul {
 		cursor: pointer;
 		white-space: nowrap;
 		opacity: .8;
-	}
-}
-
-@media screen and (max-width: $md-breakpoint){
-	header {
-
-		& a.logo {
-			margin: auto;
-		}
-		& nav {
-			display: none;
-			height: 0;
-			transition: cubic-bezier(0, 1, 0.5, 1) .5s all;
-		}
-		& a[g~="toggle"] {
-			display: flex;
-		}
-
-		&.expanded {
-			a.logo {
-				margin: 0;
-			}
-		}
 	}
 }
 

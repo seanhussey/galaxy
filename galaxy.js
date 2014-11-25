@@ -61,3 +61,12 @@ if(isFixedHeader){
     });
 }
 
+// Fixed modal content
+var isFixedModal = $('header').is('[g~="fixed"]'),
+    modalHeight = $('header[g~="fixed"]').outerHeight();
+
+if(isFixedModal){
+    $('body').css({
+        marginTop: modalHeight + 'px'
+    });
+}
