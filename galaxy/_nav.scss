@@ -1,8 +1,5 @@
 /* Header should wrap content */
 
-
-
-
 header {
 	top: 0;
 	margin: 0;
@@ -26,7 +23,7 @@ header {
 	}
 
 	& a[g~="toggle"] {
-		display: flex;
+		display: none;
 		cursor: pointer;
 		margin: auto;
 		position: absolute;
