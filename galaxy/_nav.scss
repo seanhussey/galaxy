@@ -26,6 +26,7 @@ header {
 	}
 
 	& a[g~="toggle"] {
+		display: none;
 		cursor: pointer;
 		margin: auto;
 		position: absolute;
@@ -37,10 +38,8 @@ header {
 
 
 	& nav {
-		height: 0;
-		transition-property: all;
-		transition-duration: .5s;
-		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+		display: inline-flex;
+		transition: .5s cubic-bezier(0, 1, 0.5, 1) all;
 			& ul {
 				@include align-items(center);
 				margin: 0;

@@ -1167,6 +1167,7 @@ header {
     height: auto;
     transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all; }
   header a[g~="toggle"] {
+    display: none;
     cursor: pointer;
     margin: auto;
     position: absolute;
@@ -1174,10 +1175,8 @@ header {
     left: 0;
     font-size: 1.5em; }
   header nav {
-    height: 0;
-    transition-property: all;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+    display: inline-flex;
+    transition: 0.5s cubic-bezier(0, 1, 0.5, 1) all; }
     header nav ul {
       -webkit-align-items: center;
       align-items: center;
