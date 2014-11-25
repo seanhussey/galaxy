@@ -97,7 +97,6 @@ div[g~="dropdown"] {
 
 	& + ul {
 		display: none;
-		top: 3px;
 		left: 0;
 		@include border-box;
 		width: 200px;

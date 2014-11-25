@@ -1043,7 +1043,6 @@ div[g~="dropdown"] {
   position: relative; }
   div[g~="dropdown"] button + ul {
     display: none;
-    top: 3px;
     left: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1443,7 +1442,7 @@ alert {
     top: 0; }
 
 blockquote {
-  border-left: #000 5px solid;
+  border-left: #2CA3DF 5px solid;
   padding-left: 1em; }
 
 label:not([for]) {
