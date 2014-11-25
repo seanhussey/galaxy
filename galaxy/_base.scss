@@ -31,16 +31,15 @@ i:after {
 	content: "\00a0"; /* Spacing around font-awesome and the such */
 }
 
-// $headings: h1 h2 h3 h4 h5 h6;
-// @each $heading in $headings {
-// 	$i: index($headings, $heading);
-// 	#{$heading} {
-// 		font-weight: 500;
-// 		line-height: 1.3em;
-// 		font-size: 2.7em - $i / 3;
-// 		width: 100%;
-// 	}
-// }
+$headings: h1 h2 h3 h4 h5 h6;
+@each $heading in $headings {
+	$i: index($headings, $heading);
+	#{$heading} {
+		line-height: 1.3em;
+		font-size: 2.5em - $i / 3;
+		width: 100%;
+	}
+}
 
 hr {
 	width: 33%;
@@ -109,6 +108,7 @@ td, th {
 }
 
 p {
+    font-size: 1.15em;
 	margin-top: $md-margin;
 }
 

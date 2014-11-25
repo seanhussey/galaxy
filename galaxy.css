@@ -40,6 +40,36 @@ i:after {
   content: "\00a0";
   /* Spacing around font-awesome and the such */ }
 
+h1 {
+  line-height: 1.3em;
+  font-size: 2.16667em;
+  width: 100%; }
+
+h2 {
+  line-height: 1.3em;
+  font-size: 1.83333em;
+  width: 100%; }
+
+h3 {
+  line-height: 1.3em;
+  font-size: 1.5em;
+  width: 100%; }
+
+h4 {
+  line-height: 1.3em;
+  font-size: 1.16667em;
+  width: 100%; }
+
+h5 {
+  line-height: 1.3em;
+  font-size: 0.83333em;
+  width: 100%; }
+
+h6 {
+  line-height: 1.3em;
+  font-size: 0.5em;
+  width: 100%; }
+
 hr {
   width: 33%;
   border: #eee 1px solid; }
@@ -105,6 +135,7 @@ td, th {
   padding: 0; }
 
 p {
+  font-size: 1.15em;
   margin-top: 1em; }
 
 img {
@@ -870,12 +901,13 @@ section, p, h1, h2, h3, h4, h5, h6 {
   -ms-flex-align: start;
   align-items: flex-start; }
 
-[g~="centered"] {
+[g~="middle"] {
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
+  -ms-flex-align: center; }
+
+[g~="centered"] {
   align-items: center;
-  text-align: center;
   margin: auto; }
 
 [g~="bottom"] {
@@ -1236,7 +1268,9 @@ nav[g~='grouped'] > ul {
     margin: 0; } }
 @media screen and (min-width: 767px) {
   header ul {
-    display: flex; } }
+    display: flex; }
+  header a[g~="toggle"] {
+    display: none; } }
 [g~="inline-block"] {
   display: inline-block !important; }
 

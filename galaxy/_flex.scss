@@ -282,13 +282,15 @@ section, p, h1, h2, h3, h4, h5, h6 {
 		align-items: flex-start;
 }
 
-[g~="centered"] {
+[g~="middle"] {
 		-webkit-box-align: center;
 		-webkit-align-items: center;
 		-ms-flex-align: center;
-		align-items: center;
-		text-align: center;
-		margin: auto;
+}
+
+[g~="centered"] {
+	align-items: center;
+	margin: auto;
 }
 
 [g~="bottom"] {
