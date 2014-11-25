@@ -12,7 +12,7 @@ body {
 	line-height: 2em;
     color: #424242;
     transition-duration: .3s;
-    min-height: 100%;
+    min-height: 100vh;
     position: absolute;
     width: 100%;
 }
@@ -126,4 +126,9 @@ li {
 iframe {
     border: 0;
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
