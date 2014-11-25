@@ -40,42 +40,6 @@ i:after {
   content: "\00a0";
   /* Spacing around font-awesome and the such */ }
 
-h1 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 2.36667em;
-  width: 100%; }
-
-h2 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 2.03333em;
-  width: 100%; }
-
-h3 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 1.7em;
-  width: 100%; }
-
-h4 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 1.36667em;
-  width: 100%; }
-
-h5 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 1.03333em;
-  width: 100%; }
-
-h6 {
-  font-weight: 500;
-  line-height: 1.3em;
-  font-size: 0.7em;
-  width: 100%; }
-
 hr {
   width: 33%;
   border: #eee 1px solid; }
@@ -141,7 +105,6 @@ td, th {
   padding: 0; }
 
 p {
-  font-size: 1.25em;
   margin-top: 1em; }
 
 img {
