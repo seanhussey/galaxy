@@ -983,7 +983,7 @@ button, input[type="submit"] {
     color: white; }
     button[g~="primary"]:not([g~="disabled"]):hover, input[type="submit"][g~="primary"]:not([g~="disabled"]):hover {
       background: #6ec0e9; }
-    button[g~="primary"]:not([g~="disabled"]):active, input[type="submit"][g~="primary"]:not([g~="disabled"]):active {
+    button[g~="primary"]:not([g~="disabled"]):active, button[g~="primary"].st-activated, input[type="submit"][g~="primary"]:not([g~="disabled"]):active, input[type="submit"][g~="primary"].st-activated {
       background: #1976a5; }
   button[g~="success"]:not([g~="disabled"]), input[type="submit"][g~="success"]:not([g~="disabled"]) {
     /* If background is dark, then make color lighter */
@@ -1030,6 +1030,7 @@ button, input[type="submit"] {
   button[g~="rounded"], input[type="submit"][g~="rounded"] {
     border-radius: 0.6em; }
   button[g~="dropdown"] + ul, input[type="submit"][g~="dropdown"] + ul {
+    display: none;
     top: 100%;
     left: 0;
     -webkit-box-sizing: border-box;
@@ -1044,11 +1045,12 @@ button, input[type="submit"] {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 0; }
     button[g~="dropdown"] + ul li, input[type="submit"][g~="dropdown"] + ul li {
-      display: block;
       padding: 0.5em 1.5em;
       cursor: pointer; }
       button[g~="dropdown"] + ul li:hover, input[type="submit"][g~="dropdown"] + ul li:hover {
         background: #eee; }
+  button[g~="dropdown"].st-activated + ul, input[type="submit"][g~="dropdown"].st-activated + ul {
+    display: block; }
 
 [g~="grouped"] {
   width: 100vw; }
@@ -1151,12 +1153,10 @@ header {
   transition: .5s; }
   header.expanded nav {
     display: flex;
-    overflow-y: hidden;
-    max-height: 500px;
-    /* approximate max height */
-    transition-property: all;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+    transition: 1s; }
+    header.expanded nav li {
+      height: auto;
+      transition: 2s; }
   header a[g~="toggle"] {
     display: none;
     cursor: pointer;
@@ -1166,14 +1166,15 @@ header {
     left: 0;
     font-size: 1.5em; }
   header nav {
-    max-height: 0; }
+    display: none;
+    transition: 1s; }
     header nav ul {
       -webkit-align-items: center;
       align-items: center;
       margin: 0; }
       header nav ul li {
-        justify-content: center; }
-      header nav ul li {
+        transition: 2s;
+        height: 0;
         line-height: 5em;
         color: #e6e6e6;
         font-weight: bold; }
@@ -1247,11 +1248,11 @@ nav[g~='grouped'] > ul {
   header a.logo {
     margin: auto; }
   header nav {
-    display: none;
+    height: 0;
     transition: .5s; }
   header a[g~="toggle"] {
     display: flex; }
-  header.expanded a.logo {
+  header.st-activated a.logo {
     margin: 0; } }
 @media screen and (min-width: 767px) {
   header ul {

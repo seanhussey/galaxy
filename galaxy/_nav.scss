@@ -1,8 +1,5 @@
 /* Header should wrap content */
 
-
-
-
 header {
 	top: 0;
 	margin: 0;
@@ -16,14 +13,13 @@ header {
 	transition: .5s;
 
 	&.expanded {
-		
 		& nav {
 			display: flex;
-			overflow-y: hidden;
-			max-height: 500px; /* approximate max height */
-			transition-property: all;
-			transition-duration: .5s;
-			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+			transition: 1s;
+			& li {
+				height: auto;
+				transition: 2s;
+			}
 		}
 	}
 
@@ -35,19 +31,16 @@ header {
 		top: 0;
 		left: 0;
 		font-size: 1.5em;
-
 	}
-
-
 	& nav {
-		max-height: 0;
+		display: none;
+		transition: 1s;
 			& ul {
 				@include align-items(center);
 				margin: 0;
 			& li {
-				justify-content: center;	
-			}
-			& li {
+				transition: 2s;
+				height: 0;
 				line-height: 5em;
 				color: darken(contrast-color($nav-color), 10);
 				font-weight: bold;
@@ -149,14 +142,14 @@ nav[g~='grouped'] > ul {
 			margin: auto;
 		}
 		& nav {
-			display: none;
+			height: 0;
 			transition: .5s;
 		}
 		& a[g~="toggle"] {
 			display: flex;
 		}
 
-		&.expanded {
+		&.st-activated {
 			a.logo {
 				margin: 0;
 			}

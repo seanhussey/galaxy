@@ -31,7 +31,7 @@ button, input[type="submit"] {
 		&:not([g~="disabled"]):hover {
 			background: lighten($primary-color, 15);
 		}
-		&:not([g~="disabled"]):active {
+		&:not([g~="disabled"]):active, &.st-activated {
 			background: darken($primary-color, 15);
 		}
 	}
@@ -90,7 +90,9 @@ button, input[type="submit"] {
 		border-radius: $lg-border-radius;
 	}
 	&[g~="dropdown"] {
-		 + ul {
+
+		 & + ul {
+		 	display: none;
 			top: 100%;
 			left: 0;
 			@include border-box;
@@ -103,7 +105,6 @@ button, input[type="submit"] {
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			padding: 0;
 				& li {
-					display: block;
 					padding: $sm-margin $lg-margin;
 					cursor: pointer;
 					&:hover {
@@ -111,7 +112,11 @@ button, input[type="submit"] {
 					}
 				}
 			}
+			&.st-activated + ul {
+				display: block;
+			}
 		}
+
 	}
 
 [g~="grouped"] {
