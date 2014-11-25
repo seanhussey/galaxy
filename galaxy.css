@@ -1153,10 +1153,12 @@ header {
   transition: .5s; }
   header.expanded nav {
     display: flex;
-    transition: 1s; }
-    header.expanded nav li {
-      height: auto;
-      transition: 2s; }
+    overflow-y: hidden;
+    max-height: 500px;
+    /* approximate max height */
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
   header a[g~="toggle"] {
     display: none;
     cursor: pointer;
@@ -1166,15 +1168,14 @@ header {
     left: 0;
     font-size: 1.5em; }
   header nav {
-    display: none;
-    transition: 1s; }
+    max-height: 0; }
     header nav ul {
       -webkit-align-items: center;
       align-items: center;
       margin: 0; }
       header nav ul li {
-        transition: 2s;
-        height: 0;
+        justify-content: center; }
+      header nav ul li {
         line-height: 5em;
         color: #e6e6e6;
         font-weight: bold; }
@@ -1248,11 +1249,11 @@ nav[g~='grouped'] > ul {
   header a.logo {
     margin: auto; }
   header nav {
-    height: 0;
+    display: none;
     transition: .5s; }
   header a[g~="toggle"] {
     display: flex; }
-  header.st-activated a.logo {
+  header.expanded a.logo {
     margin: 0; } }
 @media screen and (min-width: 767px) {
   header ul {
