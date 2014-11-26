@@ -45,15 +45,39 @@ Galaxy uses CSS to transition, but requires `galaxy.js` to toggle between states
 The `st-group` attribute groups unique components together, and this creates a "connection" between them. For example, two dropdown buttons might be connected with different st-groups:
 
 ```
-<div g="dropdown">
-	<button>Dropdown Button 1</button>
+<div g="dropdown" st-group="dropdown_1">
+	<button st-group="dropdown_1">Dropdown Button 1</button>
 	<ul>
 		<li>Option 1</li>
 		<li>Option 2</li>
 	</ul>
 </div>
 
+<div g="dropdown" st-group="dropdown_2">
+	<button st-group="dropdown_2">Dropdown Button 2</button>
+	<ul>
+		<li>Option 1</li>
+		<li>Option 2</li>
+	</ul>
+</div>
 ```
+
+### st-role (target/ trigger)
+
+`st-role` has two options: As a `trigger`, it will apply a class of `st-state` to the `target`. The `target` is simply the element that is being appended the class. The following example would apply a class of `active` on the parent div when the button is clicked:
+
+```
+<div g="dropdown" st-group="dropdown_1" st-role="target">
+	<button st-group="dropdown_1" st-role="trigger" st-state="active">Add .active to Parent</button>
+	<ul>
+		<li>Option 1</li>
+		<li>Option 2</li>
+	</ul>
+</div>
+```
+
+With that, you can build interactions for virtually any state.
+
 
 **Example:**
 ```
