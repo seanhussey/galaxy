@@ -1238,8 +1238,8 @@ footer {
   -ms-flex-align: end;
   align-items: flex-end; }
   footer ul {
-    display: inline-flex;
-    padding-top: 1em; }
+    padding: 0;
+    display: inline-flex; }
 
 /* Drop down */
 [g~='caret'] {
