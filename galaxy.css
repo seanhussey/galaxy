@@ -1171,6 +1171,8 @@ header {
   z-index: 1;
   display: inline-flex;
   transition: .5s; }
+  header > ul > li {
+    position: absolute; }
   header a[g~="toggle"] {
     display: none;
     cursor: pointer;
@@ -1190,7 +1192,8 @@ header {
         justify-content: center;
         line-height: 5em;
         color: #e6e6e6;
-        font-weight: bold; }
+        font-weight: bold;
+        margin: 0 1em; }
   header a {
     text-decoration: none;
     padding: 1em 1.5em;
@@ -1210,7 +1213,9 @@ header {
     vertical-align: middle; }
 
 @media screen and (max-width: 767px) {
-  header a.logo {
+  header > ul > li {
+    position: relative; }
+  header > ul > li:first-child {
     margin: auto; }
   header nav {
     display: block;
@@ -1218,6 +1223,7 @@ header {
     transition: cubic-bezier(0, 1, 0.5, 1) 0.5s all;
     overflow: hidden; }
   header a[g~="toggle"] {
+    position: absolute;
     display: flex; }
   header.expanded nav {
     height: 15em; }
