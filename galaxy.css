@@ -1039,7 +1039,7 @@ button, input[type="submit"] {
     position: relative;
     vertical-align: middle; }
   button[g~="large"], input[type="submit"][g~="large"] {
-    padding: 1.2em 2.3em;
+    padding: 1em 2.3em;
     font-size: 1.2em; }
   button[g~="small"], input[type="submit"][g~="small"] {
     padding: .5em 1.5em;
