@@ -118,7 +118,6 @@ Galaxy is currently in Beta, so this means you might run into the ocassional bug
 ### Submitting a pull request
 There's probably [an open issue right now](https://github.com/Magmoz/galaxy/issues). If you think you've found a solution, please submit a pull request and reference it in the issue. If it hasn't been reported before, just a pull request is necessary.
 
-
 ---
 
 ## Licensing
