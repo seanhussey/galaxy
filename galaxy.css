@@ -1281,8 +1281,9 @@ nav[g~='grouped'] > ul {
     display: none; }
   header > ul {
     padding-left: 0; }
-    header > ul li:first-child > a {
+    header > ul li:first-child {
       position: absolute;
+      top: 0;
       left: 5em;
       padding: 0; } }
 [g~="inline-block"] {
