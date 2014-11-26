@@ -165,13 +165,13 @@ nav[g~='grouped'] > ul {
 		& a[g~="toggle"] {
 			display: none;
 		}
-		> ul {
-			padding-left: 0;
-			li:first-child {
-				position: absolute;
-				left: 5em;
-				padding: 0;
-			}
-		}
+		// > ul {
+		// 	padding-left: 0;
+		// 	li:first-child {
+		// 		position: absolute;
+		// 		left: 5em;
+		// 		padding: 0;
+		// 	}
+		// }
 	}
 }
