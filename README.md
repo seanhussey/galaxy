@@ -1,10 +1,10 @@
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Magmoz/galaxy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 # Table of Contents
-- [Getting started](#getting-started)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#using-galaxyjs-to-toggle-states)
 - [Contributing](#contributing)
+- [MIT License](#licensing)
 
 ## Getting Started
 
@@ -35,6 +35,7 @@ For example, a button might have the following markup:
 ```
 <button g="centered large primary" id="send">Submit Form</button>
 ```
+#[View all Components](https://galaxyui.com/components)
 
 ## Using Galaxy.js to Toggle States
 
