@@ -26,3 +26,7 @@ Galaxy was created and licensed under the [MIT](//tldrlegal.com/license/mit-lice
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Magmoz/galaxy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
