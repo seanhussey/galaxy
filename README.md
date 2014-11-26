@@ -27,14 +27,23 @@ This will always link to the latest version of Galaxy.
 git submodule add https://github.com/Magmoz/galaxy.git
 ```
 
-## Usage
+## Building Components
 Galaxy uses HTML and their attributes rather than classes for styling elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable and maintainable HTML & CSS.
 
-Common components such as `input`s have their own default styling, which is perhaps why 
+For example, a button might have the following markup:
 
+```
+<button g="centered large primary" id="send">Submit Form</button>
+```
+
+## Toggling states
+
+```
+
+```
 
 ## Contributing
-Galaxy is currently in Beta, so this means you might run into the ocassional bug. If this is the case, submit an issue with your markup so we can fix it asap.
+Galaxy is currently in Beta, so this means you might run into the ocassional bug. If this is the case, [create an issue](https://github.com/Magmoz/galaxy/issues/new) with the problem and your markup so we can fix it asap.
 
 ### Submitting a pull request
 There's probably [an open issue right now](). If you think you've found a solution, please submit a pull request and reference it in the issue. If it hasn't been reported before, just a pull request is necessary.
