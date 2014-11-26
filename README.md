@@ -35,7 +35,7 @@ For example, a button might have the following markup:
 ```
 <button g="centered large primary" id="send">Submit Form</button>
 ```
-#[View all Components](https://galaxyui.com/components)
+###[View all Components](https://galaxyui.com/components)
 
 ## Using Galaxy.js to Toggle States
 
