@@ -1223,12 +1223,7 @@ header {
   header.expanded nav {
     height: 15em; }
   header.expanded a.logo {
-    margin: 0; }
-  header > ul {
-    padding-left: 0; }
-    header > ul li:first-child > a {
-      position: absolute;
-      top: 0; } }
+    margin: 0; } }
 footer {
   width: 100%;
   margin-top: 3em;
@@ -1284,8 +1279,11 @@ nav[g~='grouped'] > ul {
     display: flex; }
   header a[g~="toggle"] {
     display: none; }
-  header > ul li:first-child > a {
-    position: relative; } }
+  header > ul {
+    padding-left: 0; }
+    header > ul li:first-child > a {
+      position: absolute;
+      top: 0; } }
 [g~="inline-block"] {
   display: inline-block !important; }
 

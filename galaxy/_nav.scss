@@ -96,13 +96,7 @@ header {
 				margin: 0;
 			}
 		}
-		> ul {
-			padding-left: 0;
-			li:first-child > a{
-				position: absolute;
-				top: 0;
-			}
-		}
+
 	}
 }
 
@@ -171,10 +165,11 @@ nav[g~='grouped'] > ul {
 		& a[g~="toggle"] {
 			display: none;
 		}
-		> ul {
-
+				> ul {
+			padding-left: 0;
 			li:first-child > a {
-				position: relative;
+				position: absolute;
+				top: 0;
 			}
 		}
 	}
