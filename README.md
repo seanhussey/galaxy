@@ -15,10 +15,10 @@
 The quickest way to use Galaxy is by adding the CDN link inside your project's head tag. Galaxy.css is enough for basic Css layouts. However, any interactions involving states (dropdowns, responsive nav) will require galaxy.js (it's only 1kb minified).
 
 #### Galaxy Base (Stylesheet)
-`<link rel="stylesheet" href="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.css">`
+`<link rel="stylesheet" href="https://galaxyui.com/galaxy/galaxy.css">`
 
 #### Galaxy State-toggle (Javascript)
-`<script src="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.js"></script>`
+`<script src="https://galaxyui.com/galaxy/galaxy.js"></script>`
 
 This will always link to the latest version of Galaxy.
 
