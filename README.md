@@ -12,9 +12,9 @@
 ## Installation
 
 ### Galaxy CDN
-The quickest way to use Galaxy is by adding the CDN link inside your project's head tag. Galaxy.css is enough for basic Css layouts. However, any interactions involving states (dropdowns, responsive nav) will require galaxy.js (it's only 1kb minified).
+The quickest way to use Galaxy is by adding the CDN link inside your project's head tag. For the most part, Galaxy.css is enough for basic Css layouts. However, interactions involving states (dropdowns, responsive nav) will require galaxy.js (it's only 1kb minified).
 
-#### Galaxy Base (Stylesheet)
+#### Galaxy CSS (Stylesheet)
 `<link rel="stylesheet" href="https://galaxyui.com/galaxy/galaxy.css">`
 
 #### Galaxy State-toggle (Javascript)
@@ -34,13 +34,24 @@ Galaxy uses HTML and their attributes rather than classes for styling elements. 
 For example, a button might have the following markup:
 
 ```
-<button g="centered large primary" id="send">Submit Form</button>
+<button g="centered large primary" id="toggle_subscription" class="active">Submit Form</button>
 ```
+
+In this example, the `g` attribute creates the base of the component, whereas `id` makes it unique and `class` identifies the state it is in.
+
 ###[View all Components](https://galaxyui.com/components)
 
 ## Using Galaxy.js to Toggle States
 
-Galaxy uses CSS to transition, but requires `galaxy.js` to toggle between states. With `galaxy.js`, you can create versatile interactions all without touching Javascript.
+Galaxy takes advantage of CSS transitions to create native and performant experiences. As such, it requires `galaxy.js` to toggle between states and add those state classes. Toggling states only requires the usage of three attributes:
+
+- [st-group](#st-group)
+- [st-role](#st-role)
+- [st-state](#st-state)
+
+### st-state
+
+`st-state` is an attribute holding the name of the class that is passed from the `trigger` to the `state`.
 
 ### st-group
 
@@ -78,8 +89,7 @@ The `st-group` attribute groups unique components together, and this creates a "
 </div>
 ```
 
-With that, you can build interactions for virtually any state.
-
+Knowing these three simple attributes, you're alr.
 
 **Example:**
 ```
