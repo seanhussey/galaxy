@@ -3,19 +3,40 @@
 # Table of Contents
 - [Getting started](#getting-started)
 - [Installation](#installation)
-- [Reporting a Bug](#reporting-a-bug)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- 
 
 ## Getting Started
 
 ## Installation
 
 ### Galaxy CDN
-The quickest way to install Galaxy is by adding the CDN link inside your project's head tag. As a foundation, galaxy.css will be sufficient. But any interactions involving states (dropdowns, responsive nav) will require galaxy.js (only 2kb).
+The quickest way to install Galaxy is by adding the CDN link inside your project's head tag. Galaxy.css is enough for basic Css layouts. However, any interactions involving states (dropdowns, responsive nav) will require galaxy.js (it's only 1kb minified).
 
 `<link rel="stylesheet" href="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.css">`
+`<script src="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.js"></script>`
+
 This will always link to the latest version of Galaxy.
 
-### Add submodule
+### Clone with Git
+
+```
+git submodule add https://github.com/Magmoz/galaxy.git
+```
+
+## Usage
+Galaxy uses HTML and their attributes rather than classes for styling elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable and maintainable HTML & CSS.
+
+Common components such as `input`s have their own default styling, which is perhaps why 
+
+
+## Contributing
+Galaxy is currently in Beta, so this means you might run into the ocassional bug. If this is the case, submit an issue with your markup so we can fix it asap.
+
+### Submitting a pull request
+There's probably [an open issue right now](). If you think you've found a solution, please submit a pull request and reference it in the issue. If it hasn't been reported before, just a pull request is necessary.
+
 
 ---
 
@@ -23,10 +44,3 @@ This will always link to the latest version of Galaxy.
 
 
 Galaxy was created and licensed under the [MIT](//tldrlegal.com/license/mit-license) by [Andy Fang](//twitter.com/andyfang98).
-
-
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Magmoz/galaxy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
