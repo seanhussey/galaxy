@@ -50,10 +50,12 @@ Galaxy takes advantage of CSS transitions to create native and performant experi
 - [st-state](#st-state)
 
 ### st-state
+**the name of the class to be toggled**
 
 `st-state` is an attribute holding the name of the class that is passed from the `trigger` to the `state`.
 
 ### st-group
+**"any id to group connections"**
 
 The `st-group` attribute groups unique components together, and this creates a "connection" between them. For example, two dropdown buttons might be connected with different st-groups:
 
@@ -75,7 +77,8 @@ The `st-group` attribute groups unique components together, and this creates a "
 </div>
 ```
 
-### st-role (target/ trigger)
+### st-role
+**"target" or "trigger"**
 
 `st-role` has two options: As a `trigger`, it will apply a class of `st-state` to the `target`. The `target` is simply the element that is being appended the class. The following example would apply a class of `active` on the parent div when the button is clicked:
 
