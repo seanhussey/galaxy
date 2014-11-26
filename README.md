@@ -38,8 +38,23 @@ For example, a button might have the following markup:
 
 ## Toggling states
 
-```
 
+
+```
+<button g="primary" st-group="modal_fixed_header" st-role="trigger" st-state="active">Activate Modal  (Fixed header</button>
+
+<div st-group="modal_fixed_header" st-role="target" class="modal">
+<div st-group="modal_fixed_header" st-role="trigger" st-state="active" class="modal_bg"></div>
+<div class="modal_box">
+  <div g="fixed" class="header">
+     <h1 g="centered">Terms of Service</h1>
+  </div>
+  <div class="content">
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum harum veniam, ut totam aliquid qui laboriosam, recusandae repudiandae quaerat fugiat doloremque eum a facilis rerum amet, ea tempore architecto minima.</p>
+  </div>
+  <section g="around" class="footer"><button g="primary">I Accept</button><button st-group="modal_fixed_header" st-role="trigger" st-state="active" class="">Close					</button></section>
+</div>
+</div>
 ```
 
 ## Contributing
