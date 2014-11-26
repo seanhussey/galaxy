@@ -36,10 +36,26 @@ For example, a button might have the following markup:
 <button g="centered large primary" id="send">Submit Form</button>
 ```
 
-## Toggling states
+## Using Galaxy.js to Toggle States
 
+Galaxy uses CSS to transition, but requires `galaxy.js` to toggle between states. With `galaxy.js`, you can create versatile interactions all without touching Javascript.
 
+### st-group
 
+The `st-group` attribute groups unique components together, and this creates a "connection" between them. For example, two dropdown buttons might be connected with different st-groups:
+
+```
+<div g="dropdown">
+	<button>Dropdown Button 1</button>
+	<ul>
+		<li>Option 1</li>
+		<li>Option 2</li>
+	</ul>
+</div>
+
+```
+
+**Example:**
 ```
 <button g="primary" st-group="modal_fixed_header" st-role="trigger" st-state="active">Activate Modal  (Fixed header</button>
 
