@@ -115,8 +115,8 @@ footer {
 	-ms-flex-align: end;
 	align-items: flex-end;
 	& ul {
+		padding: 0;
 		display: inline-flex;
-		padding-top: $md-padding;
 	}
 }
 
