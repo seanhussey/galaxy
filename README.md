@@ -13,8 +13,10 @@
 ### Galaxy CDN
 The quickest way to install Galaxy is by adding the CDN link inside your project's head tag. Galaxy.css is enough for basic Css layouts. However, any interactions involving states (dropdowns, responsive nav) will require galaxy.js (it's only 1kb minified).
 
+#### Galaxy Base
 `<link rel="stylesheet" href="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.css">`
 
+#### Galaxy State-toggle
 `<script src="//cdn.rawgit.com/Magmoz/galaxy/master/galaxy.js"></script>`
 
 This will always link to the latest version of Galaxy.
