@@ -19,9 +19,9 @@ body {
 
 a {
 	color: $primary-color;
-	text-decoration: none;
 	cursor: pointer;
     opacity: 1;
+    text-decoration: none;
     &:hover {
         opacity: $md-opacity;
     }
@@ -131,4 +131,9 @@ iframe {
 footer {
     position: absolute;
     bottom: 0;
+}
+
+code {
+    padding: 3px;
+    border-radius: 3px;
 }

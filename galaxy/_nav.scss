@@ -12,6 +12,7 @@ header {
 	display: inline-flex;
 	transition: .5s;
 
+
 	& a[g~="toggle"] {
 		display: none;
 		cursor: pointer;
@@ -38,6 +39,7 @@ header {
 	}
 
 	& a {
+		text-decoration: none;
 		padding: 1em 1.5em;
 		transition: .3s;
 		color: darken(contrast-color($nav-color), 10);
@@ -109,6 +111,7 @@ footer {
 	-ms-flex-align: end;
 	align-items: flex-end;
 	& ul {
+		display: inline-flex;
 		padding-top: $md-padding;
 	}
 }

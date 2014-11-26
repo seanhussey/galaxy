@@ -30,9 +30,9 @@ body {
 
 a {
   color: #2CA3DF;
-  text-decoration: none;
   cursor: pointer;
-  opacity: 1; }
+  opacity: 1;
+  text-decoration: none; }
   a:hover {
     opacity: 0.8; }
 
@@ -158,6 +158,10 @@ iframe {
 footer {
   position: absolute;
   bottom: 0; }
+
+code {
+  padding: 3px;
+  border-radius: 3px; }
 
 /*___ GALAXY GRID */
 [g~="1"], [g~="2"], [g~="3"], [g~="4"], [g~="5"], [g~="6"], [g~="7"], [g~="8"], [g~="9"], [g~="10"], [g~="11"], [g~="12"] {
@@ -1188,6 +1192,7 @@ header {
         color: #e6e6e6;
         font-weight: bold; }
   header a {
+    text-decoration: none;
     padding: 1em 1.5em;
     transition: .3s;
     color: #e6e6e6; }
@@ -1232,6 +1237,7 @@ footer {
   -ms-flex-align: end;
   align-items: flex-end; }
   footer ul {
+    display: inline-flex;
     padding-top: 1em; }
 
 /* Drop down */
