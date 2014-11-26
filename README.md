@@ -106,7 +106,6 @@ There's probably [an open issue right now](). If you think you've found a soluti
 
 ---
 
-## Reporting a Bug
-
+## Licensing
 
 Galaxy was created by [Andy Fang](//twitter.com/andyfang98) and licensed under the [MIT](//tldrlegal.com/license/mit-license). Basically, you can do whatever you want with it as long as the original license stays intact.
