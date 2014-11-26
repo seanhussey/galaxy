@@ -160,7 +160,7 @@ nav[g~='grouped'] > ul {
 @media screen and (min-width: $md-breakpoint) {
 	header {
 		& ul {
-			display: flex;
+			display: inline-flex;
 		}
 		& a[g~="toggle"] {
 			display: none;
