@@ -1469,7 +1469,7 @@ table {
   table thead th, table tbody td {
     padding: 1em;
     border-bottom: 1px solid #eee; }
-  table[g~="hover"] > tbody > tr[g~="highlight"]:hover {
+  table[g~="hover"] > tbody > tr:hover {
     background: #eee; }
 
 /*---- PLUGINS */

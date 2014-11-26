@@ -23,7 +23,7 @@ table {
     	padding: 1em;
 		border-bottom: 1px solid $light-shadow;
 	}
-	&[g~="hover"] > tbody > tr[g~="highlight"]:hover {
+	&[g~="hover"] > tbody > tr:hover {
 		background: $light-shadow;
 	}
 }
