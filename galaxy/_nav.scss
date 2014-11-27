@@ -103,7 +103,7 @@ header {
 footer {
 	width: 100%;
 	margin-top: 3em;
-	height: 10em;
+	padding: 1em;
 	text-align: center;
 	border-top: lighten(contrast-color($footer-background), 90) 1px solid;
 	color: darken(contrast-color($footer-background), 20);
@@ -115,8 +115,9 @@ footer {
 	-ms-flex-align: end;
 	align-items: flex-end;
 	& ul {
+		padding: 0;
+		padding-top: 0;
 		display: inline-flex;
-		padding-top: $md-padding;
 	}
 }
 
@@ -160,18 +161,10 @@ nav[g~='grouped'] > ul {
 @media screen and (min-width: $md-breakpoint) {
 	header {
 		& ul {
-			display: flex;
+			display: inline-flex;
 		}
 		& a[g~="toggle"] {
 			display: none;
-		}
-		> ul {
-			padding-left: 0;
-			li:first-child {
-				position: absolute;
-				left: 5em;
-				padding: 0;
-			}
 		}
 	}
 }
