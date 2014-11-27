@@ -1,0 +1,82 @@
+$dark-shadow: #383838;
+$light-shadow: #ddd;
+
+$default-color: #f2f2f2;
+$primary-color: #39205F;
+$success-color: #c1d82f;
+$warning-color: #fbb034;
+$danger-color: #E72A2A;
+
+$text-color: #181818;
+
+body {
+    color: #181818;
+}
+
+$sm-spacing: 1em;
+$md-spacing: 1.5em;
+$lg-spacing: 2.5em;
+
+/* --- BREAKPOINTS */
+
+$xlg-breakpoint: 1440px;
+$lg-breakpoint: 970px;
+$md-breakpoint: 767px;
+$sm-breakpoint: 448px;
+$xsm-breakpoint: 259px;
+
+header {
+	transition-duration: .5s;
+}
+
+.jumbotron {
+    min-height: 200px;
+    background-repeat: no-repeat;
+    letter-spacing: 1px;
+    padding: 3em 1em;
+    &.opening {
+        background: $primary-color;
+        background-size: cover;
+
+        & .tagline {
+            color: #fff;
+            font-size: 2.7em;
+            line-height: 1.25em;
+            padding-bottom: 1em;
+        }
+    }
+}
+
+button[g~="primary"] {
+    // background: $primary-color;
+    &:hover {
+        // background: lighten($primary-color, 15)
+    }
+}
+
+.cta {
+    color: $primary-color;
+    background: #fff;
+    transition: .3s;
+    font-size: 1.1em;
+    &:active {
+        transition: 0;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        opacity: .8;
+    }
+}
+
+h1 {
+    // text-shadow: rgba(153, 153, 153, 0.24) 5px 3px 0px;
+}
+
+.favicon {
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    cursor: default;
+    /* background-color: #563D7C; */
+    border-radius: 50%;
+    border: #336 5px solid;
+}
+

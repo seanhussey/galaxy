@@ -1,0 +1,59 @@
+doctype
+html
+	head
+		title Galaxy
+		meta(name="description" content="The front-end framework based on conversational language.")
+		link(rel="icon" href="/img/favicon.png")
+		link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/white/pace-theme-minimal.css")
+		link(rel="stylesheet" href="/galaxy/galaxy.css")
+		link(rel="stylesheet" href="/css/docs.css")
+		link(rel="stylesheet" href="/css/home.css")
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+
+body(ondragstart="return false")
+
+		header(st-role="target" st-group="header")
+			ul
+				li
+					a(href="/")
+						img(src="/img/logo.png" alt="Galaxy" height="50")
+				
+				li
+					a(g="toggle" st-role="trigger" st-group="header" st-state="expanded")
+						i.fa.fa-navicon
+			nav
+				ul
+					li
+						a(href="/get-started" class=current.source=='get-started'?'active':'') Getting Started
+					li
+						a(href="/components" class=current.source == 'components' ? 'active' : '') Components
+					li
+						a.github(href="https://github.com/Magmoz/galaxy") <i class="fa fa-github"></i> Get it on Github</a>
+				
+
+		div#pjax-container
+			!= yield
+
+		footer(g="centered")
+			ul
+				a(href="/")
+					img(src="/img/logo.png" height="50")
+			br
+			//- section
+				ul
+					li Made by <a href="https://twitter.com/AndyFang98" class="twitter-follow-button" data-show-count="false">@AndyFang98</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			ul
+				li(style="margin-right: 2em;") <a class="github-button" href="https://github.com/Magmoz/galaxy" data-count-href="/Magmoz/galaxy/stargazers" data-count-api="/repos/Magmoz/galaxy#stargazers_count">Star</a>
+				li <a class="github-button" href="https://github.com/Magmoz/galaxy" data-icon="octicon-git-branch" data-count-href="/Magmoz/galaxy/network" data-count-api="/repos/Magmoz/galaxy#forks_count">Fork</a>	
+
+		script(src="/js/jquery.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.9/gist-embed.min.js")
+		script(src="/galaxy/galaxy.js")
+		script(async defer id="github-bjs" src="https://buttons.github.io/buttons.js")
+		script(src="//cdn.jsdelivr.net/pjax-standalone/0.6.1/pjax-standalone.min.js")
+		script(src="/js/docs.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.2/jquery.pjax.min.js")
+		script(async='', src='//assets.codepen.io/assets/embed/ei.js')
+		script(src="//cdnjs.cloudflare.com/ajax/libs/zclip/1.1.2/jquery.zclip.min.js")
+		script(src="/js/zeroclipboard/docs/")

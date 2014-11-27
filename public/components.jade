@@ -1,0 +1,262 @@
+section#search
+	input(type="text" placeholder="Type to search" autocomplete="off" maxlength="20" required autofocus)
+
+
+section.results
+	#components(g="centered lg-container")
+		section#welcome
+
+		section#grid(g="centered")
+			h1 <a href="#grid">Galaxy Grid</a>
+			alert(g="primary") Use <strong>section</strong> to initiate a new row.
+			p To create a 12 column row, simply initiate a <strong>section</strong>. Then, add a column number from <strong>1</strong> to <strong>12</strong> in a nested container's <strong>g</strong> attribute to specify the width of the column.
+			.example
+				<p data-height="160" data-theme-id="10241" data-slug-hash="RNPVaz" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/RNPVaz/'>Galaxy Grid - Single Row</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			
+
+			h2 Multiple rows
+			p Sometimes you'll have a lot of rows, and nesting them in multiple <strong>section</strong>s can be verbose. This is why with Galaxy, columns that overflow <strong>12</strong> will automatically start at the next row. The example below demonstrates columns overflowing two rows:
+
+			.example
+				<p data-height="250" data-theme-id="10241" data-slug-hash="RNPpVB" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/RNPpVB/'>Galaxy Grid - Multiple Rows</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			h2 Nested Columns
+			p Each row contains 12 columns, but you can make a more complex layout by nesting <strong>section</strong> within other <strong>section</strong>s.
+			
+			.example
+				<p data-height="400" data-theme-id="10241" data-slug-hash="zxGNmG" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/zxGNmG/'>Galaxy Grid - Nesting</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			
+			h2 Distributing spacing
+			
+			p Instead of defining equal columns, a cleaner approach can be to use Galaxy's <strong>between</strong> and <strong>around</strong> attributes on a parent <strong>section</strong>.
+			
+
+			alert(g="primary") Use <strong>between</strong> to add equal spacing in between items.
+			.example
+				<p data-height="200" data-theme-id="10241" data-slug-hash="bNdgMj" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/bNdgMj/'>Galaxy Grid - Between</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			
+			alert(g="primary") Use <strong>around</strong> to add equal spacing in between items and outside of it.
+			.example
+				<p data-height="200" data-theme-id="10241" data-slug-hash="qEdrmP" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/qEdrmP/'>Galaxy Grid - Around</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			h2 Offsets
+
+			alert(g="primary") Use <strong>offset-x</strong> to push the rest of the row down.
+			p Offsets are used to apply a distinct margins that push everything else down. Like all columns, anything that overflows <strong>12</strong> will start in a new row.
+
+			.example
+				<p data-height="400" data-theme-id="10241" data-slug-hash="raVywM" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/raVywM/'>Galaxy Grid - Offsets</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			
+			h2 Positioning
+			alert(g="primary") Use <strong>centered</strong>, <strong>left</strong> or <strong>right</strong> to position an element to its parent container.
+
+			p Traditional positioning has been quite frustrating. When using Galaxy, you can take a breath of fresh air. Even vertical centering is really easy.
+
+			.example
+				<p data-height="400" data-theme-id="10241" data-slug-hash="YPXZLO" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/YPXZLO/'>Galaxy Grid - Positioning</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			
+
+			h2 Responsiveness
+
+			alert(g="primary") It's good practice to set your own breakpoints. This gives you full control over which components will flow and in what width.
+			
+			p The example below holds 4 <strong>3</strong> columns that will span <strong>12</strong> columns when it reaches the <strong>md</strong> breakpoint.
+			.example
+				<p data-height="300" data-theme-id="10241" data-slug-hash="PwqxKK" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/PwqxKK/'>Galaxy Grid - Responsiveness</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			p Galaxy Grid will flow columns in a new row automatically, but it's good practice to specify when exactly things will flow. To specify, just add <strong>{breakpoint}-{width}</strong> to the g tag.
+
+			table
+				thead
+					th xsm
+					th sm
+					th md
+					th lg
+					th xlg
+				tbody
+					tr
+						td 259px
+						td 448px
+						td 767px
+						td 970px
+						td 1440px
+
+			h2 Containers
+			alert(g="primary") Create a container to set max-widths with <strong>x-container</strong>
+			p Containers wrap a group of components so that they don't overflow a set width. Though you can just use columns, using containers is the recommended way to maintain consistency over your design.
+
+			.example
+				<p data-height="288" data-theme-id="10241" data-slug-hash="azOJjL" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/azOJjL/'>Galaxy Grid - Containers</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			alert(g="warning") Need to support IE9? Checkout the <a href="https://github.com/Magmoz/galaxy/blob/master/galaxy/_grid.scss"> non-flex version</a>.
+
+		section#navbarnavigationheaderfootersidebar
+			h1 <a href="#nav">Navigation</a>
+			p Navigations are used to show the user the most important areas of the page.
+
+			h2 Header
+			.example
+				<p data-height="400" data-theme-id="10241" data-slug-hash="dPovaq" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/dPovaq/'>Galaxy Grid - Headers</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+
+
+		section#buttons
+			h1 <a href="#buttons">Buttons</a>
+		
+			alert(g="primary") Buttons can be initiated with the <strong>button</strong> tag or <strong>submit input</strong>.
+
+			section(g="around")
+				button Default Button
+				button(g="primary") Primary Button
+				button(g="success") Success Button
+				button(g="warning") Warning Button
+				button(g="danger") Danger Button
+			
+			section(g="around" style="padding-top: 1em")
+				button(g="disabled") Disabled Button
+				button(g="disabled primary") Disabled Button
+			button(g="12 large primary" style="margin-top: 1em;") Large 12 Size
+			section(g="around")
+				h2 Dropdowns
+
+				.example
+					<p data-height="300" data-theme-id="10241" data-slug-hash="RNPVGX" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/RNPVGX/'>Galaxy Buttons - Dropdown</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+		section#forms
+
+			h1 <a href="#forms">Forms</a>
+			alert(g="primary") Create a <strong>form</strong> like you normally would. Styles are applied automatically.
+
+			.example
+				<p data-height="268" data-theme-id="10241" data-slug-hash="azOJjL" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/azOJjL/'>Galaxy Grid - Containers</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			
+		section#tooltips
+			alert(g="warning") Tooltips currently do not have any options.
+			<p data-height="200" data-theme-id="10241" data-slug-hash="OPVjqK" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/OPVjqK/'>Galaxy Misc - Tooltips</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+			
+					
+
+
+		section#modals
+			h1 <a href="#modals">Modals</a>
+			section
+					
+				section(g="between")
+					button(g="primary" st-group="modal" st-role="trigger" st-state="active") Activate Modal
+
+					button(g="primary" st-group="modal_fixed_header" st-role="trigger" st-state="active") Activate Modal (Fixed header)
+					
+					button(g="primary" st-group="modal_fixed_footer" st-role="trigger" st-state="active") Activate Modal (Fixed footer)
+
+
+				.modal(st-group="modal" st-role="target")
+					.modal_bg(st-group="modal" st-role="trigger" st-state="active")
+					.modal_box
+						.header
+							h1(g="centered") This is a message
+						.content
+							p A very short message.
+						section.footer(g="around")
+							button(g="primary") Continue
+							button(st-group="modal" st-role="trigger" st-state="active") Close
+
+				.modal(st-group="modal_fixed_header" st-role="target")
+					.modal_bg(st-group="modal_fixed_header" st-role="trigger" st-state="active")
+					.modal_box
+						.header(g="fixed")
+							h1(g="centered") Terms of Service
+						.content
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum harum veniam, ut totam aliquid qui laboriosam, recusandae repudiandae quaerat fugiat doloremque eum a facilis rerum amet, ea tempore architecto minima.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+						section.footer(g="around")
+							button(g="primary") I Accept
+							button(st-group="modal_fixed_header" st-role="trigger" st-state="active") Close					
+
+				.modal(st-group="modal_fixed_footer" st-role="target")
+					.modal_bg(st-group="modal_fixed_footer" st-role="trigger" st-state="active")
+					.modal_box
+						.header
+							h1(g="centered") Terms of Service
+						.content
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum harum veniam, ut totam aliquid qui laboriosam, recusandae repudiandae quaerat fugiat doloremque eum a facilis rerum amet, ea tempore architecto minima.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio sint sit totam repellat quas nulla, suscipit. Suscipit temporibus, eveniet, sunt ullam laboriosam dicta consequuntur eius totam tempora incidunt quia.
+						section.footer(g="around")
+							button(g="primary") I Accept
+							button(st-group="modal_fixed_footer" st-role="trigger" st-state="active") Close
+				
+
+		section#typography
+			h1 <a href="#typography">Typography</a>
+			section
+				h1 The quick brown fox jumped over the heading 1
+				h2 The quick brown fox jumped over the heading 2
+				h3 The quick brown fox jumped over the heading 3
+				h4 The quick brown fox jumped over the heading 4
+				h5 The quick brown fox jumped over the heading 5
+				h6 The quick brown fox jumped over the heading 6
+				
+				blockquote This is a blockquote.
+				p This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia explicabo et facere, molestiae est aperiam deleniti, animi totam ipsum necessitatibus soluta consequuntur voluptas assumenda, id omnis. Accusamus ratione, iure quo.
+		
+
+		section#labels
+			h1 <a href="#labels">Labels</a>
+			.example
+				<p data-height="250" data-theme-id="10241" data-slug-hash="azOJjL" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/azOJjL/'>Galaxy Misc - Labels</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+		section#tables
+			h1 <a href="#tables">Tables</a>
+			.example
+				<p data-height="287" data-theme-id="10241" data-slug-hash="emNVeM" data-default-tab="result" data-user="Galaxy" class='codepen'>See the Pen <a href='http://codepen.io/Galaxy/pen/emNVeM/'>Galaxy Misc - Labels</a> by Galaxy (<a href='http://codepen.io/Galaxy'>@Galaxy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+			alert(g="warning") Sometimes you'll encounter an API that uses tables to position elements. With Galaxy, using the <strong>thead</strong> and <strong>tbody</strong> tags avoids most conflicts.
+
+
+	.searching(g="left")
+		h2 Sorry, but that component doesn't exist.
+		h3 Did you mean:
+		ul.components_list
+
+				li
+					a Grid
+				li
+					a Buttons
+				li
+					a Forms
+				li
+					a Labels
+				li
+					a Tooltips
+				li
+					a Footer
+				li
+					a Misc
+				li
+					a Modals
+				li
+					a Tables
+				li
+					a Dropdowns
+				li
+					a Typography
+	section(g="centered")
+		hr
+		h2 Get Started Guide
+		h3 Read the documentation before you get your hands dirty.
+		a(href="/get-started")
+			button(g="large success") Read docs

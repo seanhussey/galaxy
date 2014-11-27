@@ -1,0 +1,112 @@
+body {
+  color: #181818; }
+
+/* --- BREAKPOINTS */
+#search {
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  border-bottom: #EEE 3px solid;
+  padding: 0; }
+  #search input, #search .fa {
+    text-indent: 15%;
+    background: #fff;
+    box-shadow: none !important;
+    border: 0 !important;
+    font-size: 3em;
+    color: #FFF;
+    border-radius: 0;
+    width: 100%;
+    color: #000;
+    font-weight: 300;
+    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    margin: 0; }
+
+#search > input::-webkit-input-placeholder {
+  color: #383838;
+  font-weight: 300; }
+
+code[data-gist-id] {
+  text-align: left; }
+  code[data-gist-id] table > tbody {
+    color: #000 !important; }
+
+ul#components_list li:after {
+  content: "U+00B7"; }
+
+.results {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0;
+  position: relative;
+  background: #fff; }
+
+a[href*="#"] {
+  color: #3862AD; }
+
+#components {
+  position: relative;
+  width: 100%;
+  margin: auto; }
+  #components div.error {
+    position: absolute; }
+
+[g~="success"].st-activated {
+  background: #8C9D1D;
+  transition-duration: .2s; }
+  [g~="success"].st-activated:hover {
+    background: #8C9D1D;
+    transition-duration: .2s; }
+
+code {
+  font-weight: 800;
+  font-family: sans-serif; }
+
+.github-buttons li {
+  display: inline-flex;
+  padding-top: 2em;
+  margin-right: 2em; }
+
+.gist .gist-file {
+  border-radius: 0;
+  transition-duration: .2s;
+  margin-top: 1em; }
+  .gist .gist-file table th, .gist .gist-file table td {
+    border-bottom: 0; }
+
+code[data-gist-id] {
+  width: 100%; }
+
+pre.line-pre {
+  font-size: 1rem; }
+
+.active [g~="xsm-container"] {
+  max-width: 259px; }
+
+header a:not(.logo):not(.github) {
+  border-radius: 6px; }
+  header a:not(.logo):not(.github).active {
+    background: #fff;
+    color: #000;
+    opacity: 1; }
+
+.gist .file-data {
+  font-size: 1rem; }
+
+a[href*="#"] {
+  color: inherit; }
+
+#content p, #content h1, #content h2 {
+  text-align: left; }
+
+#components > section > p, #components > section > h1 {
+  text-align: left; }
+
+.example {
+  width: 100%; }
+
+#pjax-container {
+  margin-bottom: 15em; }
+
+/*# sourceMappingURL=docs.css.map */
