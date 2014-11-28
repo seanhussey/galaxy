@@ -1398,17 +1398,19 @@ alert {
     filter: none;
     opacity: 1;
     z-index: 100; }
-  .modal .footer {
+  .modal footer {
     border-top: #ddd 1px solid;
     display: flex;
-    width: 50%;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    width: 100%;
     padding: 1em 0;
     background: #FFF; }
+    .modal footer[g~="fixed"] {
+      position: fixed;
+      bottom: 40%;
+      width: 50%; }
   .modal .content {
-    padding: 0 1em;
-    margin-bottom: 3em; }
+    padding: 0 1em; }
   .modal .header {
     text-align: center;
     background: #fff; }
@@ -1436,7 +1438,7 @@ alert {
   top: -100vh;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 50%;
   margin: auto;
   transition: .5s all ease-in;
   overflow: scroll;
@@ -1463,7 +1465,7 @@ label:not([for]) {
 table {
   color: #000; }
   table thead th, table tbody td {
-    padding: 1em;
+    padding: .5em;
     border-bottom: 1px solid #eee; }
   table[g~="hover"] > tbody > tr:hover {
     background: #eee; }

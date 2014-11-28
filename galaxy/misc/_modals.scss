@@ -18,21 +18,23 @@
         z-index: 100;
     }
 
-    & .footer {
+    & footer {
         border-top: $dark-shadow 1px solid;
         display: flex;
-        width: 50%;
-        position: fixed;
-        // margin-top: 1em;
-        bottom: 0;
+        position: relative;
+        width: 100%;
         padding: 1em 0;
+
+        &[g~="fixed"] {
+            position: fixed;
+            bottom: 40%;
+            width: 50%;
+        }
         background: #FFF;
     }
 
     & .content {
-        // margin-bottom: 15em;
         padding: 0 1em;
-        margin-bottom: 3em;
     }
     & .header {
         text-align: center;
@@ -71,7 +73,7 @@
     top: -100vh;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 50%;
     margin: auto;
     transition: .5s all ease-in;
     overflow: scroll;

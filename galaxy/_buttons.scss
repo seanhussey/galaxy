@@ -94,32 +94,31 @@ button, input[type="submit"] {
 div[g~="dropdown"] {
 	position: relative;
 	& button {
-
-	& + ul {
-		display: none;
-		left: 0;
-		@include border-box;
-		width: 200px;
-		background: #FFF;
-		color: #666;
-		vertical-align: top;
-		border: 1px solid #D3D3D3;
-		border-radius: 4px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-		padding: 0;
-		position: absolute;
-		& li {
-			padding: $sm-margin $lg-margin;
-			cursor: pointer;
-			&:hover {
-				background: #eee;
+		& + ul {
+			display: none;
+			left: 0;
+			@include border-box;
+			width: 200px;
+			background: #FFF;
+			color: #666;
+			vertical-align: top;
+			border: 1px solid #D3D3D3;
+			border-radius: 4px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			padding: 0;
+			position: absolute;
+			& li {
+				padding: $sm-margin $lg-margin;
+				cursor: pointer;
+				&:hover {
+					background: #eee;
+				}
 			}
 		}
+		&.st-activated + ul {
+			display: block;
+		}
 	}
-	&.st-activated + ul {
-		display: block;
-	}
-}
 }
 
 
