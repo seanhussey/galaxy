@@ -1407,7 +1407,8 @@ alert {
     padding: 1em 0;
     background: #FFF; }
   .modal .content {
-    padding: 0 1em; }
+    padding: 0 1em;
+    margin-bottom: 3em; }
   .modal .header {
     text-align: center;
     background: #fff; }

@@ -62,11 +62,11 @@ if(isFixedHeader){
 }
 
 // Fixed modal content
-var isFixedModal = $('header').is('[g~="fixed"]'),
-    modalHeight = $('header[g~="fixed"]').outerHeight();
+var isFixedModalHeader = $('.modal_box .header').is('[g~="fixed"]'),
+    modalHeaderHeight = $('.modal_box .header').outerHeight();
 
-if(isFixedModal){
-    $('.modal .content').css({
-        marginTop: modalHeight + 'px'
+if(isFixedModalHeader){
+    $('.modal_box header[g~="fixed"] .content').css({
+        marginTop: modalHeaderHeight + 'px'
     });
 }
