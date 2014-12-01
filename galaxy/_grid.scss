@@ -2,38 +2,38 @@
 
 //___ MIXINS
 @mixin grid_columns {
-	@for $i from 1 through 12 {
-		$size: ($i/12) * 100%;
-		[g~="#{$i}"] {
-			width: $size;
-			float: left;
-		}
-	}
+    @for $i from 1 through 12 {
+        $size: ($i/12) * 100%;
+        [g~="#{$i}"] {
+            width: $size;
+            float: left;
+        }
+    }
 }
 
 @mixin grid_offset {
-	@for $i from 1 through 12 {
-		$size: ($i/12) * 100%;
-		.demo.active [g~="offset-#{$i}"] {
-			margin-left: $size;
-		}
-	}
+    @for $i from 1 through 12 {
+        $size: ($i/12) * 100%;
+        .demo.active [g~="offset-#{$i}"] {
+            margin-left: $size;
+        }
+    }
 }
 
 //___ MIXINS
 
 body {
-	min-height: 100vh;
+    min-height: 100vh;
 }
 
 section {
-	@include border-box;
-	max-width: 100%;
-	display: block;
+    @include border-box;
+    max-width: 100%;
+    display: block;
 }
 
 [g] {
-	@include border-box;
+    @include border-box;
 }
 
 // -- COLUMNS
@@ -43,21 +43,21 @@ section {
 
 // -- CONTAINERS
 [g~="xlg-container"] {
-	max-width: $xlg-breakpoint;
+    max-width: $xlg-breakpoint;
 }
 
 [g~='lg-container'] {
-	max-width: $lg-breakpoint;
+    max-width: $lg-breakpoint;
 }
 
 [g~='md-container'] {
-	max-width: $md-breakpoint;
+    max-width: $md-breakpoint;
 }
 
 [g~='sm-container'] {
-	max-width: $sm-breakpoint;
+    max-width: $sm-breakpoint;
 }
 
 [g~='xsm-container'] {
-	max-width: $xsm-breakpoint;
+    max-width: $xsm-breakpoint;
 }

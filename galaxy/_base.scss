@@ -1,15 +1,15 @@
 /* --- BASE */
 
 *:focus, *:active {
-	outline: none;
+    outline: none;
 }
 
 body {
-	font-family: "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
-	outline: 0;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
+    outline: 0;
     margin: 0;
-	-webkit-font-smoothing: antialiased;
-	line-height: 2em;
+    -webkit-font-smoothing: antialiased;
+    line-height: 2em;
     color: #424242;
     transition-duration: .3s;
     min-height: 100vh;
@@ -18,8 +18,8 @@ body {
 }
 
 a {
-	color: $primary-color;
-	cursor: pointer;
+    color: $primary-color;
+    cursor: pointer;
     opacity: 1;
     text-decoration: none;
     &:hover {
@@ -28,22 +28,22 @@ a {
 }
 
 i:after {
-	content: "\00a0"; /* Spacing around font-awesome and the such */
+    content: "\00a0"; /* Spacing around font-awesome and the such */
 }
 
 $headings: h1 h2 h3 h4 h5 h6;
 @each $heading in $headings {
-	$i: index($headings, $heading);
-	#{$heading} {
-		line-height: 1.3em;
-		font-size: 2.5em - $i / 3;
-		width: 100%;
+    $i: index($headings, $heading);
+    #{$heading} {
+        line-height: 1.3em;
+        font-size: 2.5em - $i / 3;
+        width: 100%;
         font-weight: normal;
-	}
+    }
 }
 
 hr {
-	width: 33%;
+    width: 33%;
     border: $light-shadow 1px solid;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -113,15 +113,15 @@ td, th {
 p {
     padding: .5em;
     font-size: 1.15em;
-	margin-top: $md-margin;
+    margin-top: $md-margin;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 

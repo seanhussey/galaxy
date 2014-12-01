@@ -1,148 +1,148 @@
 /* --- BUTTONS */
 
 button, input[type="submit"] {
-	border: $default-color 1px solid;
-	@include button-colors($default-color); // Includes hover and active states.
-	padding: .8rem 2rem;
-	font-weight: 400;
-	font-size: .9rem;
-	cursor: pointer;
-	border: #ddd 1px solid;
-	border-radius: $md-border-radius;
-	white-space: nowrap;
-	text-align: center;
-	font-weight: bold;
-	height: auto;
-	transition-duration: .3s;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Material design
+    border: $default-color 1px solid;
+    @include button-colors($default-color); // Includes hover and active states.
+    padding: .8rem 2rem;
+    font-weight: 400;
+    font-size: .9rem;
+    cursor: pointer;
+    border: #ddd 1px solid;
+    border-radius: $md-border-radius;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: bold;
+    height: auto;
+    transition-duration: .3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Material design
 
-	&:not([g~="disabled"]):hover {
-		filter: none;
-		box-shadow: none;
-		background: darken($default-color, 5);
-	}
-	&:not([g~="disabled"]):active {
-		background: darken($default-color, 20);
-		box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
-	}
+    &:not([g~="disabled"]):hover {
+        filter: none;
+        box-shadow: none;
+        background: darken($default-color, 5);
+    }
+    &:not([g~="disabled"]):active {
+        background: darken($default-color, 20);
+        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
 
-	&[g~="primary"] {
-		@include button-colors($primary-color);
-		&:not([g~="disabled"]):hover {
-			background: lighten($primary-color, 15);
-		}
-		&:not([g~="disabled"]):active, &.st-activated {
-			background: darken($primary-color, 15);
-		}
-	}
+    &[g~="primary"] {
+        @include button-colors($primary-color);
+        &:not([g~="disabled"]):hover {
+            background: lighten($primary-color, 15);
+        }
+        &:not([g~="disabled"]):active, &.st-activated {
+            background: darken($primary-color, 15);
+        }
+    }
 
-	&[g~="success"]:not([g~="disabled"]) {
-		@include button-colors($success-color);
-		&:not([g~="disabled"]):hover {
-			background: lighten($success-color, 15);
-		}
-		&:not([g~="disabled"]):active, &:not([g~="disabled"]).st-activated {
-			background: darken($success-color, 15);
-		}
-	}
+    &[g~="success"]:not([g~="disabled"]) {
+        @include button-colors($success-color);
+        &:not([g~="disabled"]):hover {
+            background: lighten($success-color, 15);
+        }
+        &:not([g~="disabled"]):active, &:not([g~="disabled"]).st-activated {
+            background: darken($success-color, 15);
+        }
+    }
 
-	&[g~="warning"]:not([g~="disabled"]) {
-		@include button-colors($warning-color);
-		&:not([g~="disabled"]):hover {
-			background: lighten($warning-color, 15);
-		}
-		&:not([g~="disabled"]):active {
-			background: darken($warning-color, 15);
-		}
-	}
+    &[g~="warning"]:not([g~="disabled"]) {
+        @include button-colors($warning-color);
+        &:not([g~="disabled"]):hover {
+            background: lighten($warning-color, 15);
+        }
+        &:not([g~="disabled"]):active {
+            background: darken($warning-color, 15);
+        }
+    }
 
-	&[g~="danger"]:not([g~="disabled"]) {
-		@include button-colors($danger-color);
-		&:not([g~="disabled"]):hover {
-			background: lighten($danger-color, 15);
-		}
-		&:not([g~="disabled"]):active {
-			background: darken($danger-color, 15);
-		}
-	}
+    &[g~="danger"]:not([g~="disabled"]) {
+        @include button-colors($danger-color);
+        &:not([g~="disabled"]):hover {
+            background: lighten($danger-color, 15);
+        }
+        &:not([g~="disabled"]):active {
+            background: darken($danger-color, 15);
+        }
+    }
 
-	&[g~="disabled"] {
-		border: 0;
-		background-image: none;
-		opacity: .4;
-		cursor: not-allowed;
-		box-shadow: none;
-		
-	}
-	&[g~="grouped"] {
-		position: relative;
-		vertical-align: middle;
-	}
-	&[g~="large"] {
-		padding: 1em 2.3em;
-		font-size: 1.2em;
-	}
-	&[g~="small"] {
-		padding: .5em 1.5em;
-		font-size: .9em;
-	}
-	&[g~="rounded"] {
-		border-radius: $lg-border-radius;
-	}
+    &[g~="disabled"] {
+        border: 0;
+        background-image: none;
+        opacity: .4;
+        cursor: not-allowed;
+        box-shadow: none;
+        
+    }
+    &[g~="grouped"] {
+        position: relative;
+        vertical-align: middle;
+    }
+    &[g~="large"] {
+        padding: 1em 2.3em;
+        font-size: 1.2em;
+    }
+    &[g~="small"] {
+        padding: .5em 1.5em;
+        font-size: .9em;
+    }
+    &[g~="rounded"] {
+        border-radius: $lg-border-radius;
+    }
 }
 
 div[g~="dropdown"] {
-	position: relative;
-	& button {
-		& + ul {
-			display: none;
-			left: 0;
-			@include border-box;
-			width: 200px;
-			background: #FFF;
-			color: #666;
-			vertical-align: top;
-			border: 1px solid #D3D3D3;
-			border-radius: 4px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-			padding: 0;
-			position: absolute;
-			& li {
-				padding: $sm-margin $lg-margin;
-				cursor: pointer;
-				&:hover {
-					background: #eee;
-				}
-			}
-		}
-		&.st-activated + ul {
-			display: block;
-		}
-	}
+    position: relative;
+    & button {
+        & + ul {
+            display: none;
+            left: 0;
+            @include border-box;
+            width: 200px;
+            background: #FFF;
+            color: #666;
+            vertical-align: top;
+            border: 1px solid #D3D3D3;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            position: absolute;
+            & li {
+                padding: $sm-margin $lg-margin;
+                cursor: pointer;
+                &:hover {
+                    background: #eee;
+                }
+            }
+        }
+        &.st-activated + ul {
+            display: block;
+        }
+    }
 }
 
 
 [g~="grouped"] {
-	width: 100vw;
-	& > button:not(:first-child):not(:last-child) {
-		border-radius: 0;
-		margin-right: -3px;
-	}
-	& > button:first-child:not(:last-child) {
-		border-radius: 4px 0 0 4px;
-		margin-right: -4px;
-	}
-	& > button:last-child:not(:first-child) {
-		border-radius: 4px 4px 4px 0;
-	}
+    width: 100vw;
+    & > button:not(:first-child):not(:last-child) {
+        border-radius: 0;
+        margin-right: -3px;
+    }
+    & > button:first-child:not(:last-child) {
+        border-radius: 4px 0 0 4px;
+        margin-right: -4px;
+    }
+    & > button:last-child:not(:first-child) {
+        border-radius: 4px 4px 4px 0;
+    }
 }
 
 
 @media screen and (max-width: $md-breakpoint) {
-	button, input {
-		margin: 1em;
-	}
-	label {
-		margin: 1em;
-	}
+    button, input {
+        margin: 1em;
+    }
+    label {
+        margin: 1em;
+    }
 }

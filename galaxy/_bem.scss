@@ -1,39 +1,39 @@
 [g~="inline-block"] {
-	display: inline-block !important;
+    display: inline-block !important;
 }
 
 [g~="inline"] {
-	display: inline !important;
+    display: inline !important;
 }
 
 [g~="block"] {
-	display: block !important;
+    display: block !important;
 }
 
 /* Padding */
 
 [g~="xsm-padding"] {
-	padding: .5rem
+    padding: .5rem
 }
 
 [g~='sm-padding'] {
-	padding: 1rem;
+    padding: 1rem;
 }
 
 [g~='md-padding'] {
-	padding: 2rem;
+    padding: 2rem;
 }
 
 [g~='lg-padding'] {
-	padding: 3rem;
+    padding: 3rem;
 }
 
 [g~="xlg-padding"] {
-	padding: 4rem
+    padding: 4rem
 }
 
 [g~="fixed"] {
-	position: fixed;
+    position: fixed;
 }
 
 /* Size */
@@ -41,12 +41,12 @@
 // Float
 
 [g~="centered"] {
-	@include center;
+    @include center;
 }
 
 [g~="left"] {
-	text-align: left;
-	justify-content: start;
+    text-align: left;
+    justify-content: start;
 }
 
 [g~="right"] {
