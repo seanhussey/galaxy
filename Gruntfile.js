@@ -8,14 +8,26 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		autoprefixer: {
+			options: {
+				browsers: ['last 2 version']
+			},
+			dist: {
+				files: [{
+					src: 'galaxy.css',
+					dest: 'galaxy.css'
+				}]
+			}
+		},
 		watch: {
 			css: {
 				files: 'galaxy/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'autoprefixer']
 			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['watch']);
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.registerTask('default',['sass', 'autoprefixer', 'watch']);
 };
