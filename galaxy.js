@@ -8,7 +8,7 @@ $('[st-role="trigger"]').on('click',function(event){
 		isReady = $this.is('[st-ready]'),
 		isRemove = $this.is('[st-remove]'),
 		isRestricted = $this.is('[st-restrict]'),
-		$toggleTarget = $('[st-role="target"][st-group="' + whichGroup + '"]'),      
+		$toggleTarget = $('[st-role="target"][st-group="' + whichGroup + '"]'),
 		$removeTarget = $('.' + stateRemove + '[st-role="target"]'),
 		$inactiveTriggers = $('[st-remove="' + stateRemove + '"][st-role="trigger"]');
 	if((isReady && ($this.attr('st-ready') === 'true')) || !isReady ){
@@ -34,7 +34,7 @@ $('[st-role="trigger"]').on('click',function(event){
 				}
 			}
 			$removeTarget.removeClass(stateRemove);
-			$toggleTarget.toggleClass(whichState);  
+			$toggleTarget.toggleClass(whichState);
 		}
 	}
 });
