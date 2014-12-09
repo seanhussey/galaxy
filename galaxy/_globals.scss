@@ -1,7 +1,29 @@
-/* --- SHADOW DEPTHS */
+/* -- COLOR */
 
-$dark-shadow: #ddd;
-$light-shadow: #eee;
+$dark-shadow-color: #DDDDDD;
+$light-shadow-color: #EEEEEE;
+
+$dark-border-color: #CCCCCC;
+$light-border-color: #EEEEEE;
+
+$nav-color: #39205F;
+$footer-background-color: #000000;
+
+$brand-color: #43A6EB;
+$black-color: #000000;
+$white-color: #FFFFFF;
+
+$default-color: #F2F2F2;
+$primary-color: #2CA3DF;
+$success-color: #C1D82F;
+$warning-color: #FBB034;
+$danger-color: #BD2C00;
+
+$light-default-color: #F2F2F2;
+$light-primary-color: #EBF7FD;
+$light-success-color: #F2FAE3;
+$light-warning-color: #FFFCEB;
+$light-danger-color: #FFF1F0;
 
 /* --- BORDERS */
 
@@ -20,7 +42,7 @@ $rounded: 50%;
 }
 
 @mixin light-border {
-	border: $light-shadow 1px solid;
+	border: $light-border-color 1px solid;
 	@include border-radius($md-border-radius);
 }
 
@@ -122,7 +144,7 @@ $monospace: "'Source Code Pro', monospace";
 		@return $light-shadow-color;
 	}
 	@else if lightness($bg-color) > 80 {
-		@return $dark-shadow;
+		@return #dddddd;
 	}
 	@else if lightness($bg-color) > 50 {
 		@return $dark-border-color;
