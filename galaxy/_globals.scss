@@ -1,3 +1,8 @@
+/* --- SHADOW DEPTHS */
+
+$dark-shadow: #ddd;
+$light-shadow: #eee;
+
 /* --- BORDERS */
 
 $sm-border-radius: 0.15em;
@@ -15,7 +20,7 @@ $rounded: 50%;
 }
 
 @mixin light-border {
-	border: #eee 1px solid;
+	border: $light-shadow 1px solid;
 	@include border-radius($md-border-radius);
 }
 
@@ -134,10 +139,10 @@ $light-danger-color: #fff1f0;
 
 @function contrast-border($bg-color) {
 	@if lightness($bg-color) > 90 {
-		@return #eeeeee;
+		@return $light-shadow;
 	}
 	@else if lightness($bg-color) > 80 {
-		@return #dddddd;
+		@return $dark-shadow;
 	}
 	@else if lightness($bg-color) > 50 {
 		@return #cccccc;
@@ -182,7 +187,3 @@ $footer-background: black;
 
 /* -- COLOR */
 
-/* --- SHADOW COLORS */
-
-$dark-shadow: #ddd;
-$light-shadow: #eee;
