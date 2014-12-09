@@ -1,12 +1,17 @@
 /* -- COLOR */
 
-$dark-shadow: #ddd;
-$light-shadow: #eee;
+$dark-shadow-color: #DDDDDD;
+$light-shadow-color: #EEEEEE;
+
+$dark-border-color: #CCCCCC;
+$light-border-color: #EEEEEE;
 
 $nav-color: #39205F;
-$footer-background: #000000;
+$footer-background-color: #000000;
 
 $brand-color: #43A6EB;
+$black-color: #000000;
+$white-color: #FFFFFF;
 
 $default-color: #F2F2F2;
 $primary-color: #2CA3DF;
@@ -32,12 +37,12 @@ $rounded: 50%;
 }
 
 @mixin dark-border {
-	border: #ccc 1px solid;
+	border: $dark-border-color 1px solid;
 	@include border-radius($md-border-radius);
 }
 
 @mixin light-border {
-	border: #eee 1px solid;
+	border: $light-border-color 1px solid;
 	@include border-radius($md-border-radius);
 }
 
@@ -136,25 +141,25 @@ $monospace: "'Source Code Pro', monospace";
 
 @function contrast-border($bg-color) {
 	@if lightness($bg-color) > 90 {
-		@return #eeeeee;
+		@return $light-shadow-color;
 	}
 	@else if lightness($bg-color) > 80 {
 		@return #dddddd;
 	}
 	@else if lightness($bg-color) > 50 {
-		@return #cccccc;
+		@return $dark-border-color;
 	}
 	@else {
-		@return black;
+		@return $black-color;
 	}
 }
 
 @function contrast-color($bg-color) {
 	@if lightness($bg-color) > 90 {
-		@return black;
+		@return $black-color;
 	}
 	@else {
-		@return white;
+		@return $white-color;
 	}
 }
 

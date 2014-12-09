@@ -21,9 +21,9 @@ table {
     color: #000;
     & thead th, tbody td {
     	padding: .5em;
-		border-bottom: 1px solid $light-shadow;
+		border-bottom: 1px solid $light-shadow-color;
 	}
 	&[g~="hover"] > tbody > tr:hover {
-		background: $light-shadow;
+		background: $light-shadow-color;
 	}
 }

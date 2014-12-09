@@ -104,9 +104,9 @@ footer {
 	width: 100%;
 	margin-top: 3em;
 	text-align: center;
-	border-top: lighten(contrast-color($footer-background), 90) 1px solid;
-	color: darken(contrast-color($footer-background), 20);
-	background: $footer-background;
+	border-top: lighten(contrast-color($footer-background-color), 90) 1px solid;
+	color: darken(contrast-color($footer-background-color), 20);
+	background: $footer-background-color;
 	line-height: 0;
 
 	align-items: flex-end;
