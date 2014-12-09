@@ -1,6 +1,6 @@
-@import "misc/alerts";
-@import "misc/modals";
-@import "misc/typography";
+@import "alerts";
+@import "modals";
+@import "typography";
 
 label:not([for]) {
 	padding: .6rem 1rem .6rem;

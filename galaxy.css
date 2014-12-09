@@ -150,6 +150,26 @@ code {
   padding: 3px;
   border-radius: 3px; }
 
+[g~="primary"] {
+  border-color: #1c86bc;
+  background: #2CA3DF;
+  color: white; }
+
+[g~="success"] {
+  border-color: #9fb321;
+  background: #C1D82F;
+  color: white; }
+
+[g~="warning"] {
+  border-color: #f79c05;
+  background: #FBB034;
+  color: white; }
+
+[g~="danger"] {
+  border-color: #8a2000;
+  background: #BD2C00;
+  color: white; }
+
 /*___ GALAXY GRID */
 [g~="1"], [g~="2"], [g~="3"], [g~="4"], [g~="5"], [g~="6"], [g~="7"], [g~="8"], [g~="9"], [g~="10"], [g~="11"], [g~="12"] {
   box-sizing: border-box;
@@ -1354,35 +1374,8 @@ nav[g~='grouped'] > ul {
           justify-content: flex-end; }
 
 alert {
-  padding: 1em 0;
-  margin-top: 1em;
-  width: 100%;
-  border-radius: 0.3em;
-  font-size: .9em;
   display: block;
-  margin-bottom: 1em;
-  color: #727272;
-  background: #F2F2F2;
-  border: #b2b2b2 1px solid; }
-  alert[g~="primary"] {
-    color: #1594d4;
-    background: #EBF7FD;
-    border: #77c9f1 1px solid; }
-  alert[g~="success"] {
-    color: #87bc22;
-    background: #F2FAE3;
-    border: #c0e777 1px solid; }
-  alert[g~="warning"] {
-    color: #ebc800;
-    background: #FFFCEB;
-    border: #ffe96c 1px solid; }
-  alert[g~="danger"] {
-    color: #f01000;
-    background: #FFF1F0;
-    border: #ff7a71 1px solid; }
-
-alert {
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
   border-radius: 0.3em;
   font-size: .9rem;
@@ -1552,23 +1545,3 @@ table {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
-
-[g~="primary"] {
-  border-color: #1c86bc;
-  background: #2CA3DF;
-  color: white; }
-
-[g~="success"] {
-  border-color: #9fb321;
-  background: #C1D82F;
-  color: white; }
-
-[g~="warning"] {
-  border-color: #f79c05;
-  background: #FBB034;
-  color: white; }
-
-[g~="danger"] {
-  border-color: #8a2000;
-  background: #BD2C00;
-  color: white; }
