@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			css: {
-				files: 'public/**/*.scss',
+				files: 'public/*.jade',
 				tasks: ['sass']
 			}
 		},
@@ -47,6 +47,27 @@ module.exports = function(grunt) {
 	      }
 	    }
 	  },
+
+	browserSync: {
+	    bsFiles: {
+	        src : 'public/*'
+	    },
+	    options: {
+	    	proxy: 'localhost:9000',
+	    	watchTask: true
+	    }
+	},
+
+	  harp: {
+    server: {
+      server: true,
+      source: 'src'
+    },
+    dist: {
+      source: 'src',
+      dest: 'build'
+    }
+  }
 
 	});
 
