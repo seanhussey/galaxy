@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	$searching = $('.searching');
 	$searchbar = $('#search input');
-	$components = $('.results #components > section');
+	$components = $('.results #components .demo');
 	
 	if ($searchbar.val() == '') {
 		$searching.hide();
@@ -18,9 +18,9 @@ $(document).ready(function(){
 		if (input_val.length) {
 			$components.hide();
 			$searching.hide();
-			$('section[id*="' + input_val + '"]').fadeIn();
+			$('[id*="' + input_val + '"].demo').fadeIn();
 
-			$('section[id*="' + input_val.replace(/ /g,'') + '"]').show();
+			$('section[id*="' + input_val.replace(/ /g,'') + '"].demo').show();
 			$('.searching h2').html('Sorry, but "' + input_val + '" isn\'t a component.')
 
 		}
@@ -42,7 +42,7 @@ $(document).ready(function(){
 			var input_val = replacement.toLowerCase()
 			$components.hide();
 			$searching.show();
-			$('section[id*="' + input_val + '"]').fadeIn();
+			$('[id*="' + input_val + '"].demo').fadeIn();
 			$searching.hide();
 		});
 
