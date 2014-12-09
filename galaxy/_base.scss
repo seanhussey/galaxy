@@ -37,7 +37,6 @@ $headings: h1 h2 h3 h4 h5 h6;
 	#{$heading} {
 		line-height: 1.3em;
 		font-size: 2.5em - $i / 3;
-		width: 100%;
 		font-weight: normal;
 	}
 }
