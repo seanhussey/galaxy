@@ -1,19 +1,19 @@
 alert {
-    padding: 1rem;
-    width: 100%;
-    border-radius: $md-border-radius;
-    font-size: .9rem;
-    @include alert-color($light-default-color);
-    &[g~="primary"] {
-        @include alert-color($light-primary-color);
-    }
-    &[g~="success"] {
-        @include alert-color($light-success-color);
-    }
-    &[g~="warning"] {
-        @include alert-color($light-warning-color);
-    }
-    &[g~="danger"] {
-        @include alert-color($light-danger-color);
-    }
+	padding: 1rem;
+	width: 100%;
+	border-radius: $md-border-radius;
+	font-size: .9rem;
+	@include alert-color($light-default-color);
+	&[g~="primary"] {
+		@include alert-color($light-primary-color);
+	}
+	&[g~="success"] {
+		@include alert-color($light-success-color);
+	}
+	&[g~="warning"] {
+		@include alert-color($light-warning-color);
+	}
+	&[g~="danger"] {
+		@include alert-color($light-danger-color);
+	}
 }

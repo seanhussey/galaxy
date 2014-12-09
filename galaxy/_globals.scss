@@ -6,19 +6,19 @@ $lg-border-radius: 0.6em;
 $rounded: 50%;
 
 @mixin border-radius($amount) {
-    -webkit-border-radius: $md-border-radius;
-    -moz-border-radius: $md-border-radius;
-    border-radius: $md-border-radius;
+	-webkit-border-radius: $md-border-radius;
+	-moz-border-radius: $md-border-radius;
+	border-radius: $md-border-radius;
 }
 
 @mixin dark-border {
-    border: #ccc 1px solid;
-    @include border-radius($md-border-radius);
+	border: #ccc 1px solid;
+	@include border-radius($md-border-radius);
 }
 
 @mixin light-border {
-    border: #eee 1px solid;
-    @include border-radius($md-border-radius);
+	border: #eee 1px solid;
+	@include border-radius($md-border-radius);
 }
 
 /* --- BREAKPOINTS */
@@ -52,58 +52,58 @@ $monospace: "'Source Code Pro', monospace";
 /* --- GRID */
 
 @mixin center {
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    text-align: center;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	text-align: center;
 }
 
 @mixin display($value) {
-    display: $value;
+	display: $value;
 }
 
 @mixin align-items($value) {
-    -webkit-box-align: $value;
-    -webkit-align-items: $value;
-    -moz-box-align: $value;
-    -ms-flex-align: $value;
-    align-items: $value;
+	-webkit-box-align: $value;
+	-webkit-align-items: $value;
+	-moz-box-align: $value;
+	-ms-flex-align: $value;
+	align-items: $value;
 }
 
 @mixin flex-direction($value) {
-    -webkit-flex-direction: $value;
-    -ms-flex-direction: $value;
-    flex-direction: $value;
+	-webkit-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
 }
 
 @mixin flex-wrap($value: "wrap") {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 @mixin flex-basis($size) {
-    -webkit-flex-basis: $size;
-    flex-basis: $size;
+	-webkit-flex-basis: $size;
+	flex-basis: $size;
 }
 
 @mixin order($order) {
-    -webkit-order: $order;
-    order: $order;
+	-webkit-order: $order;
+	order: $order;
 }
 
 @mixin justify-content($value) {
-    -webkit-justify-content: $value;
-    justify-content: $value;
-    @if $value == centered {
-        margin: auto;
-        text-align: center;
-    }
+	-webkit-justify-content: $value;
+	justify-content: $value;
+	@if $value == centered {
+		margin: auto;
+		text-align: center;
+	}
 }
 
 @mixin align-items($value) {
-    -webkit-align-items: $value;
-    align-items: $value;
+	-webkit-align-items: $value;
+	align-items: $value;
 }
 
 /* --- Navbar */
@@ -129,63 +129,63 @@ $light-danger-color: #fff1f0;
 /* Animate */
 
 @mixin transition($transition) {
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    -ms-transition: $transition;
-    transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	transition: $transition;
 }
 
 @mixin fade($duration: 0.2s) {
-    @include transition(opacity $duration linear, visibility $duration linear);
+	@include transition(opacity $duration linear, visibility $duration linear);
 }
 
 @mixin transform($string) {
-    -webkit-transform: $string;
-    -moz-transform: $string;
-    -ms-transform: $string;
-    -o-transform: $string;
-    transform: $string;
+	-webkit-transform: $string;
+	-moz-transform: $string;
+	-ms-transform: $string;
+	-o-transform: $string;
+	transform: $string;
 }
 
 @mixin button-colors($button-color) {
-    /* If background is dark, then make color lighter */
-    border-color: darken($button-color, 10);
-    background: $button-color;
-    color: lighten(contrast-color($button-color), 50);
-    
+	/* If background is dark, then make color lighter */
+	border-color: darken($button-color, 10);
+	background: $button-color;
+	color: lighten(contrast-color($button-color), 50);
+	
 }
 
 @function contrast-border($bg-color) {
-    @if lightness($bg-color) > 90 {
-        @return #eeeeee;
-    }
-    @else if lightness($bg-color) > 80 {
-        @return #dddddd;
-    }
-    @else if lightness($bg-color) > 50 {
-        @return #cccccc;
-    }
-    @else {
-        @return black;
-    }
+	@if lightness($bg-color) > 90 {
+		@return #eeeeee;
+	}
+	@else if lightness($bg-color) > 80 {
+		@return #dddddd;
+	}
+	@else if lightness($bg-color) > 50 {
+		@return #cccccc;
+	}
+	@else {
+		@return black;
+	}
 }
 
 $brand-color: #43a6eb;
 
 @function contrast-color($bg-color) {
-    @if lightness($bg-color) > 90 {
-        @return black;
-    }
-    @else {
-        @return white;
-    }
+	@if lightness($bg-color) > 90 {
+		@return black;
+	}
+	@else {
+		@return white;
+	}
 }
 
 @mixin alert-color($color) {
-    color: darken($color, 50);
-    background: $color;
-    border: darken($color, 25) 1px solid;
+	color: darken($color, 50);
+	background: $color;
+	border: darken($color, 25) 1px solid;
 }
 
 /* --- FORMS */
@@ -197,16 +197,16 @@ $footer-background: black;
 /* --- MISC */
 
 @mixin border-box {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @mixin no-appearance {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
 }
 
 /* -- COLOR */
