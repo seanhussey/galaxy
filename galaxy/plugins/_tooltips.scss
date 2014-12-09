@@ -8,7 +8,6 @@
 /* Hide the tooltip content by default */
 [data-tooltip]:before,
 [data-tooltip]:after {
-
 	@include transition(all 0.1s linear);
 	visibility: hidden;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";

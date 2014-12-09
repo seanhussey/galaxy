@@ -29,7 +29,7 @@ body {
   width: 100%; }
 
 a {
-  color: #2ca3df;
+  color: #2CA3DF;
   cursor: pointer;
   opacity: 1;
   text-decoration: none; }
@@ -37,7 +37,7 @@ a {
     opacity: 0.8; }
 
 i:after {
-  content: "\00a0"
+  content: "\00a0";
   /* Spacing around font-awesome and the such */ }
 
 h1 {
@@ -78,7 +78,7 @@ h6 {
 
 hr {
   width: 33%;
-  border: #eeeeee 1px solid;
+  border: #eee 1px solid;
   margin-top: 1em;
   margin-bottom: 1em; }
 
@@ -986,7 +986,7 @@ button, input[type="submit"] {
   button[g~="primary"], input[type="submit"][g~="primary"] {
     /* If background is dark, then make color lighter */
     border-color: #1c86bc;
-    background: #2ca3df;
+    background: #2CA3DF;
     color: white; }
     button[g~="primary"]:not([g~="disabled"]):hover, input[type="submit"][g~="primary"]:not([g~="disabled"]):hover {
       background: #6ec0e9; }
@@ -1013,7 +1013,7 @@ button, input[type="submit"] {
   button[g~="danger"]:not([g~="disabled"]), input[type="submit"][g~="danger"]:not([g~="disabled"]) {
     /* If background is dark, then make color lighter */
     border-color: #8a2000;
-    background: #bd2c00;
+    background: #BD2C00;
     color: white; }
     button[g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):hover, input[type="submit"][g~="danger"]:not([g~="disabled"]):not([g~="disabled"]):hover {
       background: #ff430b; }
@@ -1105,12 +1105,12 @@ input[type='text'], input[type='password'], input[type='email'], input[type='url
 
 input[type='checkbox'], input[type='radio'], input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='number'], input[type='search'], input[type='tel'], textarea {
   /* All fields with text */
-  border: #eeeeee 1px solid; }
+  border: #eee 1px solid; }
   input[type='checkbox']:hover, input[type='radio']:hover, input[type='text']:hover, input[type='password']:hover, input[type='email']:hover, input[type='url']:hover, input[type='number']:hover, input[type='search']:hover, input[type='tel']:hover, textarea:hover {
-    box-shadow: inset 0 1px 3px #eeeeee; }
+    box-shadow: inset 0 1px 3px #eee; }
   input[type='checkbox']:focus, input[type='radio']:focus, input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='url']:focus, input[type='number']:focus, input[type='search']:focus, input[type='tel']:focus, textarea:focus {
-    border: #2ca3df 1px solid;
-    box-shadow: inset 0 1px 3px #eeeeee; }
+    border: #2CA3DF 1px solid;
+    box-shadow: inset 0 1px 3px #eee; }
   input[type='checkbox']:focus:invalid, input[type='radio']:focus:invalid, input[type='text']:focus:invalid, input[type='password']:focus:invalid, input[type='email']:focus:invalid, input[type='url']:focus:invalid, input[type='number']:focus:invalid, input[type='search']:focus:invalid, input[type='tel']:focus:invalid, textarea:focus:invalid {
     border: #b2b2b2 1px solid; }
 
@@ -1147,7 +1147,7 @@ header {
   margin: 0;
   position: relative;
   opacity: 1;
-  background-color: #39205f;
+  background-color: #39205F;
   color: gray;
   width: 100%;
   z-index: 1;
@@ -1402,7 +1402,7 @@ alert {
     opacity: 1;
     z-index: 100; }
   .modal footer {
-    border-top: #dddddd 1px solid;
+    border-top: #ddd 1px solid;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1436,7 +1436,7 @@ alert {
 .modal_box {
   width: 50%;
   height: auto;
-  border: 0.15em solid #eeeeee;
+  border: 0.15em solid #eee;
   border-radius: 3px;
   background: #fff;
   position: absolute;
@@ -1452,7 +1452,7 @@ alert {
     top: 0; }
 
 blockquote {
-  border-left: #2ca3df 5px solid;
+  border-left: #2CA3DF 5px solid;
   padding-left: 1em; }
 
 label:not([for]) {
@@ -1471,9 +1471,9 @@ table {
   color: #000; }
   table thead th, table tbody td {
     padding: .5em;
-    border-bottom: 1px solid #eeeeee; }
+    border-bottom: 1px solid #eee; }
   table[g~="hover"] > tbody > tr:hover {
-    background: #eeeeee; }
+    background: #eee; }
 
 /*---- PLUGINS */
 /* Add this attribute to the element that needs a tooltip */
@@ -1533,7 +1533,7 @@ table {
 [g~="primary"] {
   /* If background is dark, then make color lighter */
   border-color: #1c86bc;
-  background: #2ca3df;
+  background: #2CA3DF;
   color: white; }
 
 [g~="success"] {
@@ -1551,5 +1551,5 @@ table {
 [g~="danger"] {
   /* If background is dark, then make color lighter */
   border-color: #8a2000;
-  background: #bd2c00;
+  background: #BD2C00;
   color: white; }

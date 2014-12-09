@@ -36,7 +36,7 @@ input[type='checkbox'], input[type='radio'], input[type='text'], input[type='pas
 		box-shadow: inset 0 1px 3px $light-shadow;
 	}
 	&:focus:invalid {
-	 	border: darken($default-color, 25) 1px solid;
+		border: darken($default-color, 25) 1px solid;
 	}
 }
 

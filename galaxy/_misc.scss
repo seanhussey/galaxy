@@ -18,9 +18,9 @@ label:not([for]) {
 
 
 table {
-    color: #000;
-    & thead th, tbody td {
-    	padding: .5em;
+	color: #000;
+	& thead th, tbody td {
+		padding: .5em;
 		border-bottom: 1px solid $light-shadow;
 	}
 	&[g~="hover"] > tbody > tr:hover {
