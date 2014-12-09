@@ -1,3 +1,25 @@
+/* -- COLOR */
+
+$dark-shadow: #ddd;
+$light-shadow: #eee;
+
+$nav-color: #39205F;
+$footer-background: #000000;
+
+$brand-color: #43A6EB;
+
+$default-color: #F2F2F2;
+$primary-color: #2CA3DF;
+$success-color: #C1D82F;
+$warning-color: #FBB034;
+$danger-color: #BD2C00;
+
+$light-default-color: #F2F2F2;
+$light-primary-color: #EBF7FD;
+$light-success-color: #F2FAE3;
+$light-warning-color: #FFFCEB;
+$light-danger-color: #FFF1F0;
+
 /* --- BORDERS */
 
 $sm-border-radius: 0.15em;
@@ -92,27 +114,7 @@ $monospace: "'Source Code Pro', monospace";
 	align-items: $value;
 }
 
-/* --- Navbar */
-
-$low-transparency: 0.9;
-// $nav-color: #202d5f;
-$nav-color: #39205F;
-
-/* --- Buttons */
-
-$default-color: #f2f2f2;
-$primary-color: #2CA3DF;
-$success-color: #c1d82f;
-$warning-color: #fbb034;
-$danger-color: #BD2C00;
-
-$light-default-color: #f2f2f2;
-$light-primary-color: #ebf7fd;
-$light-success-color: #f2fae3;
-$light-warning-color: #fffceb;
-$light-danger-color: #fff1f0;
-
-/* Animate */
+/* ANIMATE */
 
 @mixin transition($transition) {
 	transition: $transition;
@@ -127,11 +129,9 @@ $light-danger-color: #fff1f0;
 }
 
 @mixin button-colors($button-color) {
-	/* If background is dark, then make color lighter */
 	border-color: darken($button-color, 10);
 	background: $button-color;
 	color: lighten(contrast-color($button-color), 50);
-	
 }
 
 @function contrast-border($bg-color) {
@@ -149,8 +149,6 @@ $light-danger-color: #fff1f0;
 	}
 }
 
-$brand-color: #43a6eb;
-
 @function contrast-color($bg-color) {
 	@if lightness($bg-color) > 90 {
 		@return black;
@@ -166,12 +164,6 @@ $brand-color: #43a6eb;
 	border: darken($color, 25) 1px solid;
 }
 
-/* --- FORMS */
-
-/* --- FOOTER */
-
-$footer-background: black;
-
 /* --- MISC */
 
 @mixin border-box {
@@ -181,10 +173,3 @@ $footer-background: black;
 @mixin no-appearance {
 	appearance: none;
 }
-
-/* -- COLOR */
-
-/* --- SHADOW COLORS */
-
-$dark-shadow: #ddd;
-$light-shadow: #eee;
