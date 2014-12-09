@@ -14,7 +14,6 @@ $rounded: 50%;
 	border-radius: $md-border-radius;
 }
 
-
 @mixin dark-border {
 	border: $dark-border-color 1px solid;
 	@include border-radius($md-border-radius);
