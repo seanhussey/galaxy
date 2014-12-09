@@ -43,9 +43,15 @@ $headings: h1 h2 h3 h4 h5 h6;
 
 hr {
 	width: 33%;
+<<<<<<< HEAD
 	border: $light-shadow 1px solid;
 	margin-top: 1em;
 	margin-bottom: 1em;
+=======
+    border: $light-shadow-color 1px solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+>>>>>>> 5330c32ceb2cb131284e1d0973a78ab57e3fe116
 }
 
 button {
