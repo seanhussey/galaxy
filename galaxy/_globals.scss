@@ -1,36 +1,7 @@
-<<<<<<< HEAD
 /* --- SHADOW DEPTHS */
 
 $dark-shadow: #ddd;
 $light-shadow: #eee;
-=======
-/* -- COLOR */
-
-$dark-shadow-color: #DDDDDD;
-$light-shadow-color: #EEEEEE;
-
-$dark-border-color: #CCCCCC;
-$light-border-color: #EEEEEE;
-
-$nav-color: #39205F;
-$footer-background-color: #000000;
-
-$brand-color: #43A6EB;
-$black-color: #000000;
-$white-color: #FFFFFF;
-
-$default-color: #F2F2F2;
-$primary-color: #2CA3DF;
-$success-color: #C1D82F;
-$warning-color: #FBB034;
-$danger-color: #BD2C00;
-
-$light-default-color: #F2F2F2;
-$light-primary-color: #EBF7FD;
-$light-success-color: #F2FAE3;
-$light-warning-color: #FFFCEB;
-$light-danger-color: #FFF1F0;
->>>>>>> 5330c32ceb2cb131284e1d0973a78ab57e3fe116
 
 /* --- BORDERS */
 
@@ -50,11 +21,7 @@ $rounded: 50%;
 }
 
 @mixin light-border {
-<<<<<<< HEAD
 	border: $light-shadow 1px solid;
-=======
-	border: $light-border-color 1px solid;
->>>>>>> 5330c32ceb2cb131284e1d0973a78ab57e3fe116
 	@include border-radius($md-border-radius);
 }
 
@@ -131,29 +98,7 @@ $monospace: "'Source Code Pro', monospace";
 	align-items: $value;
 }
 
-<<<<<<< HEAD
-/* --- Navbar */
-
-$nav-color: #39205F;
-
-/* --- Buttons */
-
-$default-color: #f2f2f2;
-$primary-color: #2CA3DF;
-$success-color: #c1d82f;
-$warning-color: #fbb034;
-$danger-color: #BD2C00;
-
-$light-default-color: #f2f2f2;
-$light-primary-color: #ebf7fd;
-$light-success-color: #f2fae3;
-$light-warning-color: #fffceb;
-$light-danger-color: #fff1f0;
-
-/* Animate */
-=======
 /* ANIMATE */
->>>>>>> 5330c32ceb2cb131284e1d0973a78ab57e3fe116
 
 @mixin transition($transition) {
 	transition: $transition;
