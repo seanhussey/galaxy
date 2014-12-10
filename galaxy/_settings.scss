@@ -1,49 +1,64 @@
-/* --- SHADOW DEPTHS */
+/* --- BREAKPOINTS */
 
-$dark-shadow: #ddd;
-$light-shadow: #eee;
+// $xlg-breakpoint: 1440px;
+// $lg-breakpoint: 970px;
+// $md-breakpoint: 767px;
+// $sm-breakpoint: 448px;
+// $xsm-breakpoint: 259px;
 
 /* --- BORDERS */
 
-$sm-border-radius: 0.15em;
-$md-border-radius: 0.3em;
-$lg-border-radius: 0.6em;
-$rounded: 50%;
-
-/* --- BREAKPOINTS */
-
-$xlg-breakpoint: 1440px;
-$lg-breakpoint: 970px;
-$md-breakpoint: 767px;
-$sm-breakpoint: 448px;
-$xsm-breakpoint: 259px;
+// $sm-border-radius: 0.15em;
+// $md-border-radius: 0.3em;
+// $lg-border-radius: 0.6em;
+// $rounded: 50%;
 
 /* --- TRANSPARENCY */
 
-$high-opacity: 0.7;
-$md-opacity: 0.8;
-$low-opacity: 0.9;
+// $high-opacity: 0.7;
+// $md-opacity: 0.8;
+// $low-opacity: 0.9;
 
 /* --- PADDING & MARGIN */
 
-$sm-padding: 0.5em;
-$md-padding: 1em;
-$lg-padding: 2em;
+// $sm-padding: 0.5em;
+// $md-padding: 1em;
+// $lg-padding: 2em;
 
-$sm-margin: 0.5em;
-$md-margin: 1em;
-$lg-margin: 1.5em;
+// $sm-margin: 0.5em;
+// $md-margin: 1em;
+// $lg-margin: 1.5em;
 
 /* --- TYPOGRAPHY */
 
-$monospace: "'Source Code Pro', monospace";
+// $monospace: "'Source Code Pro', monospace";
 
-/* --- GRID */
+/* --- Navbar */
 
-$flex: true;
+// $low-transparency: 0.9;
+$nav-color: #39205F;
 
-/* ANIMATE */
+/* --- Buttons */
+
+// $default-color: #f2f2f2;
+// $primary-color: #2CA3DF;
+// $success-color: #c1d82f;
+// $warning-color: #fbb034;
+// $danger-color: #BD2C00;
+
+// Light alternative
+// $light-default-color: #f2f2f2;
+// $light-primary-color: #ebf7fd;
+// $light-success-color: #f2fae3;
+// $light-warning-color: #fffceb;
+// $light-danger-color: #fff1f0;
+
+/* --- SHADOW COLORS */
+
+// $dark-shadow: #ddd;
+// $light-shadow: #eee;
 
 
-/* --- MISC */
+/* --- FOOTER */
 
+// $footer-background: #000;

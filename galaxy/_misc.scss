@@ -27,3 +27,14 @@ table {
 		background: $light-shadow-color;
 	}
 }
+
+nav {
+	.displays {
+		& .display {
+			display: none;
+			&.active {
+				display: flex;
+			}
+		}
+	}
+}

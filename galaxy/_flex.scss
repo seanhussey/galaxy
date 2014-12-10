@@ -1,18 +1,45 @@
-/*___ GALAXY GRID */
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
-//___ MIXINS
+section[g~="reverse"] {
+	flex-direction: row-reverse;
+	flex-wrap: row-reverse;
+	justify-content: space-around;
+}
+
+[g~="column"][g~="reverse"] {
+	flex-direction: column-reverse;
+	flex-wrap: column-reverse;
+}
+
+[g~="1"], [g~="2"], [g~="3"], [g~="4"], [g~="5"], [g~="6"], [g~="7"], [g~="8"], [g~="9"], [g~="10"], [g~="11"], [g~="12"] {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+
+
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 100%;
+}
+
 @mixin grid_columns {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         [g~="#{$i}"] {
             flex-basis: $size;
             max-width: $size;
-            align-items: stretch;
         }
     }
 }
 
-@mixin xsm_grid_columns {
+@mixin grid_columns-xsm {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $xsm-breakpoint) {
@@ -24,7 +51,7 @@
     }
 }
 
-@mixin sm_grid_columns {
+@mixin grid_columns-sm {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (max-width: $sm-breakpoint) {
@@ -36,7 +63,7 @@
     }
 }
 
-@mixin md_grid_columns {
+@mixin grid_columns-md {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (max-width: $md-breakpoint) {
@@ -48,7 +75,7 @@
     }
 }
 
-@mixin lg_grid_columns {
+@mixin grid_columns-lg {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (max-width: $lg-breakpoint) {
@@ -60,7 +87,7 @@
     }
 }
 
-@mixin xlg_grid_columns {
+@mixin grid_columns-xlg {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (max-width: $xlg-breakpoint) {
@@ -72,17 +99,16 @@
     }
 }
 
-@mixin grid_offset {
+@mixin grid_columns-offset {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
-        .active [g~="offset-#{$i}"] {
+        [g~="offset-#{$i}"] {
             margin-left: $size;
-            transition-duration: 3s;
         }
     }
 }
 
-@mixin xsm_grid_offset {
+@mixin grid_columns-offset-xsm {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $xsm-breakpoint) {
@@ -93,7 +119,7 @@
     }
 }
 
-@mixin sm_grid_offset {
+@mixin grid_columns-offset-sm {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $sm-breakpoint) {
@@ -104,7 +130,7 @@
     }
 }
 
-@mixin md_grid_offset {
+@mixin grid_columns-offset-md {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $md-breakpoint) {
@@ -115,7 +141,7 @@
     }
 }
 
-@mixin lg_grid_offset {
+@mixin grid_columns-offset-lg {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $lg-breakpoint) {
@@ -126,7 +152,7 @@
     }
 }
 
-@mixin xlg_grid_offset {
+@mixin grid_columns-offset-xlg {
     @for $i from 1 through 12 {
         $size: $i / 12 * 100%;
         @media screen and (min-width: $xlg-breakpoint) {
@@ -137,140 +163,95 @@
     }
 }
 
-[g~="1"], [g~="2"], [g~="3"], [g~="4"], [g~="5"], [g~="6"], [g~="7"], [g~="8"], [g~="9"], [g~="10"], [g~="11"], [g~="12"] {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-shrink: 0;
+[g~="centered"] {
+	justify-content: center;
+	text-align: center;
 }
 
-section {
-    display: flex;
-    section {
-    	flex-direction: row;
-    }
-}
-
-section, p, h1, h2, h3, h4, h5, h6 {
-    box-sizing: border-box;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    & [g~="reverse"] {
-        flex-direction: row-reverse;
-        flex-wrap: row-reverse;
-    }
-}
-
-[g][g~="reverse"] {
-    flex-direction: column-reverse;
-    flex-wrap: column-reverse;
-}
-
-// -- COLUMNS
+// Grid columns
 @include grid_columns;
+@include grid_columns-xsm;
+@include grid_columns-sm;
+@include grid_columns-md;
+@include grid_columns-lg;
+@include grid_columns-xlg;
 
-@include xsm_grid_columns;
+// Grid offsets
+@include grid_columns_offset;
+@include grid_columns_offset-xsm;
+@include grid_columns_offset-sm;
+@include grid_columns_offset-md;
+@include grid_columns_offset-lg;
+@include grid_columns_offset-xlg;
 
-@include sm_grid_columns;
-
-@include md_grid_columns;
-
-@include lg_grid_columns;
-
-@include xlg_grid_columns;
-
-// -- OFFSETS
-@include grid_offset;
-
-@include xsm_grid_offset;
-
-@include sm_grid_offset;
-
-@include md_grid_offset;
-
-@include lg_grid_offset;
-
-@include xlg_grid_offset;
-
-// -- CONTAINERS
+[g~="xlg-container"], [g~="lg-container"], [g~="md-container"], [g~="sm-container"], [g~="xsm-container"] {
+	margin-left: 1em;
+	margin-right: 1em;
+}
 
 [g~="xlg-container"] {
     max-width: $xlg-breakpoint;
 }
 
-[g~='lg-container'] {
+[g~="lg-container"] {
     max-width: $lg-breakpoint;
 }
 
-[g~='md-container'] {
+[g~="md-container"] {
     max-width: $md-breakpoint;
 }
 
-[g~='sm-container'] {
+[g~="sm-container"] {
     max-width: $sm-breakpoint;
 }
 
-[g~='xsm-container'] {
+[g~="xsm-container"] {
     max-width: $xsm-breakpoint;
 }
 
 [g~="start"] {
-    justify-content: flex-start;
-    text-align: start;
-}
-
-[g~="end"] {
-    justify-content: flex-end;
-    text-align: end;
-}
-
-[g~="top"] {
-    align-items: flex-start;
-}
-
-[g~="middle"] {
-    -ms-flex-align: center;
+	justify-content: flex-start;
+	text-align: start;
 }
 
 [g~="centered"] {
-    align-items: center;
-    margin: auto;
+	justify-content: center;
+	text-align: center;
+}
+
+[g~="end"] {
+	justify-content: flex-end;
+	text-align: end;
+}
+
+[g~="top"] {
+	align-items: flex-start;
+}
+
+[g~="middle"] {
+	align-items: center;
 }
 
 [g~="bottom"] {
-    align-items: flex-end;
-}
-
-[g~="stretch"] {
-    align-items: stretch;
-}
-
-[g~="baseline"] {
-    align-items: baseline;
+	align-items: flex-end;
 }
 
 [g~="around"] {
-    justify-content: space-around;
+	justify-content: space-around;
 }
 
 [g~="between"] {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 [g~="first"] {
-    order: -1;
+	order: -1;
 }
 
 [g~="last"] {
-    order: 1;
+	order: 1;
 }
 
-[g~="inline"] {
-    display: inline-flex;
-}
-
-[g~="block"] {
-    display: flex;
+h1, h2, h3, h4, h5, h6 {
+	width: 100%;
 }

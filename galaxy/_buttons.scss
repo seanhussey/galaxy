@@ -8,7 +8,6 @@ button, input[type="submit"] {
 	font-size: .9rem;
 	cursor: pointer;
 	border: #ddd 1px solid;
-	border-radius: $md-border-radius;
 	white-space: nowrap;
 	text-align: center;
 	font-weight: bold;
@@ -103,7 +102,7 @@ div[g~="dropdown"] {
 			color: #666;
 			vertical-align: top;
 			border: 1px solid #D3D3D3;
-			border-radius: 4px;
+			border-radius: $md-border-radius;
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			padding: 0;
 			position: absolute;
@@ -134,15 +133,5 @@ div[g~="dropdown"] {
 	}
 	& > button:last-child:not(:first-child) {
 		border-radius: 4px 4px 4px 0;
-	}
-}
-
-
-@media screen and (max-width: $md-breakpoint) {
-	button, input {
-		margin: 1em;
-	}
-	label {
-		margin: 1em;
 	}
 }
