@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	line-height: 2em;
-	color: #424242;
+	color: $dark-shadow-color;
 	transition-duration: .3s;
 	min-height: 100vh;
 	position: absolute;
@@ -106,7 +106,7 @@ td, th {
 }
 
 p {
-	padding: .5em;
+	// padding: .5em;
 	font-size: 1.15em;
 	margin-top: $md-margin;
 }
