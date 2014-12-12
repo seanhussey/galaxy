@@ -113,7 +113,7 @@ Knowing these three simple attributes, you're alr.
 ```
 
 ## Contributing
-Galaxy is currently in Beta, so this means you might run into the ocassional bug. If this is the case, [create an issue](https://github.com/Magmoz/galaxy/issues/new) with the problem and your markup so we can fix it asap.
+Galaxy is currently in Beta, so this means you might run into the occasional bug. If this is the case, [create an issue](https://github.com/Magmoz/galaxy/issues/new) with the problem and your markup so we can fix it asap.
 
 ### Submitting a pull request
 There's probably [an open issue right now](https://github.com/Magmoz/galaxy/issues). If you think you've found a solution, please submit a pull request and reference it in the issue. If it hasn't been reported before, just a pull request is necessary.
